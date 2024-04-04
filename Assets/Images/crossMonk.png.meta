@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94e7010aeb266d6449e2f3227d62fa3c
+guid: 3e6e3ba4133278d418ad6cfd9fae16e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,9 +113,9 @@ TextureImporter:
       name: Idle_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 840
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -134,9 +134,9 @@ TextureImporter:
       name: Idle_1
       rect:
         serializedVersion: 2
-        x: 91
+        x: 90
         y: 840
-        width: 10
+        width: 11
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -155,9 +155,9 @@ TextureImporter:
       name: Ready_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 776
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Ready_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 776
-        width: 12
-        height: 15
+        x: 89
+        y: 775
+        width: 13
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,9 +197,9 @@ TextureImporter:
       name: Run_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 712
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -218,9 +218,9 @@ TextureImporter:
       name: Run_1
       rect:
         serializedVersion: 2
-        x: 89
+        x: 88
         y: 712
-        width: 14
+        width: 15
         height: 15
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -239,9 +239,9 @@ TextureImporter:
       name: Run_2
       rect:
         serializedVersion: 2
-        x: 154
+        x: 153
         y: 712
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -281,10 +281,10 @@ TextureImporter:
       name: Jump_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 520
-        width: 14
-        height: 13
+        x: 24
+        y: 519
+        width: 15
+        height: 14
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,9 +302,9 @@ TextureImporter:
       name: Jump_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 87
         y: 520
-        width: 16
+        width: 17
         height: 17
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -323,10 +323,10 @@ TextureImporter:
       name: Jump_2
       rect:
         serializedVersion: 2
-        x: 152
+        x: 151
         y: 520
-        width: 16
-        height: 15
+        width: 17
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,9 +344,9 @@ TextureImporter:
       name: Jab_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 25
         y: 392
-        width: 12
+        width: 14
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -367,7 +367,7 @@ TextureImporter:
         serializedVersion: 2
         x: 91
         y: 392
-        width: 10
+        width: 17
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -388,7 +388,7 @@ TextureImporter:
         serializedVersion: 2
         x: 155
         y: 392
-        width: 12
+        width: 18
         height: 15
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -407,9 +407,9 @@ TextureImporter:
       name: Slash_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 328
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -428,9 +428,9 @@ TextureImporter:
       name: Slash_1
       rect:
         serializedVersion: 2
-        x: 90
+        x: 89
         y: 328
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -451,8 +451,8 @@ TextureImporter:
         serializedVersion: 2
         x: 155
         y: 328
-        width: 12
-        height: 16
+        width: 19
+        height: 17
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,9 +471,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 219
-        y: 328
-        width: 11
-        height: 15
+        y: 327
+        width: 18
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,9 +575,9 @@ TextureImporter:
       name: Push_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 456
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -596,10 +596,10 @@ TextureImporter:
       name: Push_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 456
-        width: 13
-        height: 15
+        x: 89
+        y: 455
+        width: 14
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -617,10 +617,10 @@ TextureImporter:
       name: Push_2
       rect:
         serializedVersion: 2
-        x: 154
-        y: 456
-        width: 15
-        height: 15
+        x: 153
+        y: 455
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,10 +638,10 @@ TextureImporter:
       name: Crawl_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 648
-        width: 11
-        height: 13
+        x: 26
+        y: 647
+        width: 12
+        height: 14
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,10 +659,10 @@ TextureImporter:
       name: Crawl_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 648
-        width: 14
-        height: 10
+        x: 91
+        y: 646
+        width: 15
+        height: 12
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,9 +681,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 157
-        y: 648
+        y: 647
         width: 13
-        height: 10
+        height: 11
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,9 +702,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 648
+        y: 646
         width: 14
-        height: 10
+        height: 12
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -722,9 +722,9 @@ TextureImporter:
       name: Death_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 8
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -743,10 +743,10 @@ TextureImporter:
       name: Death_1
       rect:
         serializedVersion: 2
-        x: 91
-        y: 8
-        width: 11
-        height: 12
+        x: 90
+        y: 7
+        width: 12
+        height: 13
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -764,10 +764,10 @@ TextureImporter:
       name: Death_2
       rect:
         serializedVersion: 2
-        x: 156
-        y: 8
-        width: 14
-        height: 10
+        x: 155
+        y: 6
+        width: 15
+        height: 12
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -785,9 +785,9 @@ TextureImporter:
       name: Block_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 25
         y: 72
-        width: 12
+        width: 13
         height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
@@ -806,10 +806,10 @@ TextureImporter:
       name: Block_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 72
-        width: 12
-        height: 15
+        x: 89
+        y: 71
+        width: 13
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
