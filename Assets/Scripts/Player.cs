@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public Transform pos;
     public Vector2 boxSize;
     public float curTime;
-    public float coolTime = 0.5f;
+    public float coolTime;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
