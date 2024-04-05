@@ -163,7 +163,7 @@ Transform:
   m_GameObject: {fileID: 36536473}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3098215, y: 1.5700577, z: -0.019867433}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -530,7 +530,7 @@ MonoBehaviour:
   id: 0
   prefabId: 0
   damage: 11
-  count: 1
+  count: 3
   speed: 0
 --- !u!1 &2114587786
 GameObject:
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 264867056813905079, guid: a7ad03d3a9438474a9f129c0283d2969, type: 3}
+  - {fileID: 1928726083880548843, guid: 05fbeb71f6b3668438245def2176219c, type: 3}
 --- !u!4 &2114587788
 Transform:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ Transform:
   m_GameObject: {fileID: 2114587786}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2748997, y: 4.120899, z: 0.0325921}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

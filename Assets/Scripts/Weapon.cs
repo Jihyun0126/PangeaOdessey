@@ -47,7 +47,7 @@ public class Weapon : MonoBehaviour
 
             Vector3 rotVec = Vector3.forward * 360 * index / count;
             bullet.Rotate(rotVec);
-            bullet.Translate(bullet.up * 1.9f, Space.World);
+            bullet.Translate(bullet.up * 2f, Space.World);
 
             bullet.GetComponent<Bullet>().Init(damage, -1); // -1은 계속 관통
         }
