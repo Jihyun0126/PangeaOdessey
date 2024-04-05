@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 177359090}
   m_Layer: 0
   m_Name: Monk
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   pos: {fileID: 343218695}
   boxSize: {x: 3.5, y: 3.5}
   curTime: 3
-  coolTime: 0.01
+  coolTime: 1.5
 --- !u!50 &177359086
 Rigidbody2D:
   serializedVersion: 4
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f075f961f4fbc4684f9b354a37a806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   target: {fileID: 177359086}
 --- !u!1 &343218694
 GameObject:
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f075f961f4fbc4684f9b354a37a806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   target: {fileID: 177359086}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
