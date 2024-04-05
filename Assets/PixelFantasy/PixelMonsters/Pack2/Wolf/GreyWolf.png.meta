@@ -261,10 +261,10 @@ TextureImporter:
       name: Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 22
         y: 256
-        width: 64
-        height: 64
+        width: 20
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: Idle_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 86
         y: 256
-        width: 64
-        height: 64
+        width: 19
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +303,10 @@ TextureImporter:
       name: Idle_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 151
         y: 256
-        width: 64
-        height: 64
+        width: 18
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: Idle_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 215
         y: 256
-        width: 64
-        height: 64
+        width: 18
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +345,10 @@ TextureImporter:
       name: Ready_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 21
         y: 192
-        width: 64
-        height: 64
+        width: 20
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,10 +366,10 @@ TextureImporter:
       name: Ready_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 192
-        width: 64
-        height: 64
+        width: 22
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,10 +387,10 @@ TextureImporter:
       name: Ready_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 146
         y: 192
-        width: 64
-        height: 64
+        width: 24
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,10 +408,10 @@ TextureImporter:
       name: Ready_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 192
-        width: 64
-        height: 64
+        width: 22
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,10 +429,10 @@ TextureImporter:
       name: Run_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 128
-        width: 64
-        height: 64
+        width: 26
+        height: 18
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +450,10 @@ TextureImporter:
       name: Run_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 81
         y: 128
-        width: 64
-        height: 64
+        width: 25
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,10 +471,10 @@ TextureImporter:
       name: Run_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
+        x: 146
+        y: 129
+        width: 25
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,10 +492,10 @@ TextureImporter:
       name: Run_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 209
         y: 128
-        width: 64
-        height: 64
+        width: 26
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: Run_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 273
         y: 128
-        width: 64
-        height: 64
+        width: 25
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,10 +534,10 @@ TextureImporter:
       name: Run_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 128
-        width: 64
-        height: 64
+        width: 24
+        height: 18
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,10 +555,10 @@ TextureImporter:
       name: Attack_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 17
         y: 64
-        width: 64
-        height: 64
+        width: 25
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,10 +576,10 @@ TextureImporter:
       name: Attack_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 64
-        width: 64
-        height: 64
+        width: 33
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -597,10 +597,10 @@ TextureImporter:
       name: Attack_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 64
-        width: 64
-        height: 64
+        width: 36
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,10 +618,10 @@ TextureImporter:
       name: Attack_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 212
         y: 64
-        width: 64
-        height: 64
+        width: 34
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -639,10 +639,10 @@ TextureImporter:
       name: Attack_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 278
         y: 64
-        width: 64
-        height: 64
+        width: 21
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,10 +660,10 @@ TextureImporter:
       name: Attack_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 342
         y: 64
-        width: 64
-        height: 64
+        width: 20
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,10 +681,10 @@ TextureImporter:
       name: Death_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 23
         y: 0
-        width: 64
-        height: 64
+        width: 19
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -702,10 +702,10 @@ TextureImporter:
       name: Death_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 87
         y: 0
-        width: 64
-        height: 64
+        width: 19
+        height: 17
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -723,10 +723,10 @@ TextureImporter:
       name: Death_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 147
         y: 0
-        width: 64
-        height: 64
+        width: 24
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,10 +744,10 @@ TextureImporter:
       name: Death_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 209
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -765,10 +765,10 @@ TextureImporter:
       name: Death_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 274
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -786,10 +786,10 @@ TextureImporter:
       name: Death_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 338
         y: 0
-        width: 64
-        height: 64
+        width: 26
+        height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
