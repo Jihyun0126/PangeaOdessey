@@ -509,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 2028824648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -528,9 +528,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  prefabId: 0
-  damage: 11
-  count: 3
+  prefabId: 2
+  damage: 10
+  count: 7
   speed: 0
 --- !u!1 &2114587786
 GameObject:
@@ -563,6 +563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1928726083880548843, guid: 05fbeb71f6b3668438245def2176219c, type: 3}
+  - {fileID: 5920479168952176006, guid: 6b8c5a972ab9ac9409b1cbc80c007ade, type: 3}
+  - {fileID: 6384594730035186844, guid: 438513c67085a364296b017e7765154e, type: 3}
 --- !u!4 &2114587788
 Transform:
   m_ObjectHideFlags: 0

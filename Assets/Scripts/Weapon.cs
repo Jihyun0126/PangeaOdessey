@@ -22,6 +22,9 @@ public class Weapon : MonoBehaviour
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
+            case 1:
+                transform.Rotate(Vector3.back * speed * Time.deltaTime);
+                break;
             default:
                 break;
         }
@@ -34,15 +37,19 @@ public class Weapon : MonoBehaviour
                 speed = 150;
                 Batch();
                 break;
+            case 1:
+                speed = 150;
+                Batch();
+                break;
             default:
                 break;
         }
     }
     void Batch() //방패 배치하는 함수
     {
-        for(int index=0; index<count; index++)
+        for (int index = 0; index < count; index++)
         {
-            Transform bullet =GameManager.instance.pool.Get(prefabId).transform;
+            Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
             bullet.parent = transform;
 
             Vector3 rotVec = Vector3.forward * 360 * index / count;
