@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
         if (inputVec.x != 0) // inputVec.x 값이 0보다 큰 경우
         {
-                spriter.flipX = inputVec.x < 0;     
+            spriter.flipX = inputVec.x < 0;
         }
     }
 
