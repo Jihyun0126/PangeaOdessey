@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Bullet.cs.meta
 guid: 171440906b9486a40877f0eaa93644d7
+========
+guid: 798f67cab9947d247a9aed8a3a28dca1
+>>>>>>>> feature_bjh:Assets/Scripts/AlphaBtn.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
