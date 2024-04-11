@@ -58,14 +58,7 @@ public class Player : MonoBehaviour
 
         if (inputVec.x != 0) // inputVec.x 값이 0보다 큰 경우
         {
-            if (inputVec.x < 0)
-            {
-                transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            }
+            spriter.flipX = inputVec.x < 0;
         }
     }
 
