@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Bullet.cs.meta
+guid: f97ebb3693406cc4a8afbb8f35a3fff7
+========
+guid: 798f67cab9947d247a9aed8a3a28dca1
+>>>>>>>> feature_bjh:Assets/Scripts/AlphaBtn.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
