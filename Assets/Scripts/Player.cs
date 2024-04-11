@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
             Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
             foreach (Collider2D collider in collider2Ds)
             {
-                Debug.Log(collider.tag);
+                //Debug.Log(collider.tag);
             }
             anim.SetTrigger("atk");
             curTime = coolTime; // 쿨다운을 다시 설정
