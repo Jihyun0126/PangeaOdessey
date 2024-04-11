@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -118,7 +131,7 @@ TextureImporter:
         width: 138
         height: 91
       alignment: 9
-      pivot: {x: 1, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,15 +144,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlashFX 5A v1_3_11
+      name: SlashFX 5A v1_3_3
       rect:
         serializedVersion: 2
-        x: 611
-        y: 35
+        x: 1009
+        y: 36
         width: 148
         height: 81
       alignment: 9
-      pivot: {x: 1, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlashFX 5A v1_3_31
+      name: SlashFX 5A v1_3_2
       rect:
         serializedVersion: 2
         x: 807
@@ -160,7 +173,7 @@ TextureImporter:
         width: 148
         height: 76
       alignment: 9
-      pivot: {x: 1, y: 1}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,13 +189,13 @@ TextureImporter:
       name: SlashFX 5A v1_3_1
       rect:
         serializedVersion: 2
-        x: 1021
-        y: 43
-        width: 128
-        height: 74
+        x: 612
+        y: 46
+        width: 151
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 5, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -194,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlashFX 5A v1_3_2
+      name: SlashFX 5A v1_3_4
       rect:
         serializedVersion: 2
         x: 1212
@@ -215,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlashFX 5A v1_3_3
+      name: SlashFX 5A v1_3_5
       rect:
         serializedVersion: 2
         x: 1395
@@ -249,7 +262,6 @@ TextureImporter:
       SlashFX 5A v1_3_0: -1286843961
       SlashFX 5A v1_3_1: 1587848031
       SlashFX 5A v1_3_10: -544320110
-      SlashFX 5A v1_3_11: -136669940
       SlashFX 5A v1_3_12: 2009390934
       SlashFX 5A v1_3_13: 935228054
       SlashFX 5A v1_3_14: 1703503674
@@ -258,7 +270,7 @@ TextureImporter:
       SlashFX 5A v1_3_17: -480158544
       SlashFX 5A v1_3_18: -55539103
       SlashFX 5A v1_3_19: -23731257
-      SlashFX 5A v1_3_2: -738820117
+      SlashFX 5A v1_3_2: -1677259522
       SlashFX 5A v1_3_20: 597950672
       SlashFX 5A v1_3_21: -1224729307
       SlashFX 5A v1_3_22: 1144606094
@@ -269,14 +281,13 @@ TextureImporter:
       SlashFX 5A v1_3_27: 1414673112
       SlashFX 5A v1_3_28: 71842334
       SlashFX 5A v1_3_29: 888677602
-      SlashFX 5A v1_3_3: 224322467
+      SlashFX 5A v1_3_3: -136669940
       SlashFX 5A v1_3_30: 1225435544
-      SlashFX 5A v1_3_31: -1677259522
       SlashFX 5A v1_3_32: 1392308976
       SlashFX 5A v1_3_33: -142897451
       SlashFX 5A v1_3_34: -2057089045
-      SlashFX 5A v1_3_4: 634375572
-      SlashFX 5A v1_3_5: -2041025833
+      SlashFX 5A v1_3_4: -738820117
+      SlashFX 5A v1_3_5: 224322467
       SlashFX 5A v1_3_6: 495312133
       SlashFX 5A v1_3_7: 505950635
       SlashFX 5A v1_3_8: -207359037
