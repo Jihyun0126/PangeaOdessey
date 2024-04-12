@@ -12,6 +12,14 @@ public class Weapon : MonoBehaviour
     public float speed;
 
 
+    float timer;
+    Player player;
+
+    void Awake()
+    {
+        player = GetComponentInParent<Player>();
+    }
+
 
     void Start()
     {
@@ -26,6 +34,13 @@ public class Weapon : MonoBehaviour
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
             case 1:
+                timer += Time.deltaTime;
+
+                if(timer> speed)
+                {
+                    timer = 0f;
+                    Fire();
+                }
                 break;
             default:
                 break;
@@ -40,7 +55,7 @@ public class Weapon : MonoBehaviour
                 BatchShield();
                 break;
             case 1:
-                BatchSword();
+                speed = 0.3f;
                 break;
             default:
                 break;
@@ -65,5 +80,14 @@ public class Weapon : MonoBehaviour
     {
         Transform sword = GameManager.instance.pool.Get(prefabId).transform;
         sword.parent = transform;
+    }
+    void Fire()
+    {
+        if (!player.scanner.nearestTarget)
+            return;
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+
     }
 }
