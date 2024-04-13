@@ -36,10 +36,10 @@ public class Weapon : MonoBehaviour
             case 1:
                 timer += Time.deltaTime;
 
-                if(timer> speed)
+                if (timer > speed)
                 {
                     timer = 0f;
-                    Fire();
+                    Axe();
                 }
                 break;
             default:
@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour
                 BatchShield();
                 break;
             case 1:
-                speed = 0.3f;
+                speed = 1.0f;
                 break;
             default:
                 break;
@@ -72,7 +72,7 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 2f, Space.World);
 
-            bullet.GetComponent<Bullet>().Init(damage, -1); // -1은 계속 관통
+            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // -1은 계속 관통
         }
     }
 
@@ -81,13 +81,32 @@ public class Weapon : MonoBehaviour
         Transform sword = GameManager.instance.pool.Get(prefabId).transform;
         sword.parent = transform;
     }
-    void Fire()
+    void Axe()
     {
         if (!player.scanner.nearestTarget)
             return;
 
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = targetPos - transform.position;
+        dir = dir.normalized;
+
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
-
+        StartCoroutine(RotateAndMove(bullet, dir));
+        bullet.GetComponent<Bullet>().Init(damage, 0, dir);
+    }
+    IEnumerator RotateAndMove(Transform target, Vector3 dir)
+    {
+        float rotationSpeed = 180f; // 1초에 180도씩 회전하도록 설정
+        float angle = 0f;
+        while (angle < 360f)
+        {
+            // 시간에 따라 회전 각도를 증가시킵니다.
+            float rotationAmount = rotationSpeed * Time.deltaTime;
+            target.Rotate(Vector3.forward, rotationAmount);
+            target.Translate(dir * 2f * Time.deltaTime, Space.World);
+            angle += Mathf.Abs(rotationAmount);
+            yield return null;
+        }
     }
 }
