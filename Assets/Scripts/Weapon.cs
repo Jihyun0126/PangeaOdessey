@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
     float timer;
     Player player;
 
-    
+
     void Awake()
     {
         player = GetComponentInParent<Player>();
@@ -141,6 +141,26 @@ public class Weapon : MonoBehaviour
     }
     void Bow()
     {
+        if (!player.scanner.nearestTarget)
+            return;
+
+            Vector3 targetPos = player.scanner.nearestTarget.position;
+            Vector3 dir = targetPos - player.transform.position;
+            dir = dir.normalized;
+
+            Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+            bullet.position = transform.position;
+            bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+            bullet.GetComponent<Bullet>().Init(damage, 1, dir);
+    }
+}
+
+
+
+
+    /* 보는 방향으로 오브젝트 발사하는 알고리즘 잠깐 보류
+    void spear()
+    {
         // 플레이어의 바라보는 방향을 얻어옵니다.
         Vector3 dir = new Vector3(savex, savey, 0);
 
@@ -155,4 +175,4 @@ public class Weapon : MonoBehaviour
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         bullet.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
-}
+    */
