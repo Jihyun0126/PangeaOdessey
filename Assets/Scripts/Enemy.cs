@@ -25,32 +25,38 @@ public class Enemy : MonoBehaviour
     {
         if (!isLive) return;
 
-        Vector2 dirVec = target.position - rigid.position;
+        Vector2 dirVec = target.position - rigid.position; 
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
-
+        Debug.Log(target);
         // 플레이어 감지 및 공격
         DetectPlayerAndAttack();
     }
 
     void DetectPlayerAndAttack()
     {
-        // 플레이어 감지
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
-        foreach (var hit in hits)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
+        foreach (Collider2D collider in colliders)
         {
-            if (hit.CompareTag("Player"))
+            if (collider.CompareTag("Player"))
             {
-                // 공격 모션 재생
+                // 플레이어를 감지했을 때의 동작
+                // 여기에 플레이어를 공격하는 로직을 추가하세요.
                 anim.SetTrigger("Attack");
-                break; // 하나의 플레이어만 감지하면 루프 종료
             }
         }
     }
-
     void LateUpdate()
     {
+        if (!isLive) return;
         spriter.flipX = target.position.x < rigid.position.x;
     }
+
+    void OnEnable()
+    {
+        // 플레이어 오브젝트를 찾아서 target에 할당
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+    }
 }
+

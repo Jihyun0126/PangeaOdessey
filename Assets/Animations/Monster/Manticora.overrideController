@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Manticora
+  m_Controller: {fileID: 9100000, guid: 557d0cda79f73de4cb6da66655cb8f96, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dd86491578403dc49bc549a3fdff54a9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d8909d7d2001c1a45bb6f7240d48bef3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 276bf62850b760145978e5e5c37498ba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 333a240e8e472cd4086cc99d14cdd0ae, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 82d5810f2ee63094c848086573c21755, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b3afffeeeef2f344684594b3849ce57a, type: 2}
