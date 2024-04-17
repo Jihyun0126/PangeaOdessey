@@ -30,6 +30,6 @@ public class Spawner : MonoBehaviour
     {
         GameObject enemy = GameManager.instance.pool.Get(level);
         //자기 자신을 빼기 위해 0부터가 아닌 1부터
-        enemy.transform.position = spawnPoint[Random.Range(4,spawnPoint.Length)].position;
+        enemy.transform.position = spawnPoint[Random.Range(1,spawnPoint.Length)].position;
     }
 }
