@@ -134,7 +134,7 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
         StartCoroutine(RotateAndMove(bullet, dir));
-        bullet.GetComponent<Bullet>().Init(damage, 0, dir);
+        bullet.GetComponent<Bullet>().Init(damage, -2, dir);
     }
     IEnumerator RotateAndMove(Transform target, Vector3 dir) //도끼 회전하며 날아가는 코루틴
     {
@@ -185,7 +185,7 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = player.transform.position;
         bullet.rotation = Quaternion.Euler(0, 0, angle);
-        bullet.GetComponent<Bullet>().Init(damage, 1, direction);
+        bullet.GetComponent<Bullet>().Init(damage, 0, direction);
     }
 
     // 2D 벡터에서 각도를 얻는 함수
@@ -215,11 +215,11 @@ public class Weapon : MonoBehaviour
 
         for (int index = 0; index < count; index++) { 
         Vector3 targetPos = player.scanner.nearestTarget.position; //..위치
-        Vector3 dir = targetPos - transform.position; //..방향
+        Vector3 dir = targetPos - player.transform.position; //..방향
         dir = dir.normalized;
 
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.position = transform.position;
+        bullet.position = player.transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
         }
