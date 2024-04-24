@@ -226,25 +226,3 @@ public class Weapon : MonoBehaviour
     }
 
 }
-
-
-
-
-/* 보는 방향으로 오브젝트 발사하는 알고리즘 잠깐 보류
-void spear()
-{
-    // 플레이어의 바라보는 방향을 얻어옵니다.
-    Vector3 dir = new Vector3(savex, savey, 0);
-
-    // 방향을 정규화합니다.
-    dir = dir.normalized;
-
-    // 총알 오브젝트를 풀에서 가져옵니다.
-    Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-    bullet.position = transform.position;
-
-    bullet.GetComponent<Bullet>().Init(damage, 0, dir);
-    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-    bullet.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-}
-*/
