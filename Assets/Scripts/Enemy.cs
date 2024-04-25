@@ -10,8 +10,8 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public Animator anim;
-    public LayerMask playerLayer; // ÇÃ·¹ÀÌ¾î ·¹ÀÌ¾î ¸¶½ºÅ©
-    public float detectionRadius = 5f; // °ø°Ý °¨Áö ¹üÀ§
+    public LayerMask playerLayer; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½Å©
+    public float detectionRadius = 5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     bool isLive;
     Rigidbody2D rigid;
@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
+
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -32,7 +34,6 @@ public class Enemy : MonoBehaviour
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
-        // ÇÃ·¹ÀÌ¾î °¨Áö ¹× °ø°Ý
         DetectPlayerAndAttack();
     }
 
@@ -43,8 +44,6 @@ public class Enemy : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                // ÇÃ·¹ÀÌ¾î¸¦ °¨ÁöÇßÀ» ¶§ÀÇ µ¿ÀÛ
-                // ¿©±â¿¡ ÇÃ·¹ÀÌ¾î¸¦ °ø°ÝÇÏ´Â ·ÎÁ÷À» Ãß°¡ÇÏ¼¼¿ä.
                 anim.SetTrigger("Attack");
             }
         }
@@ -57,7 +56,7 @@ public class Enemy : MonoBehaviour
 
     void OnEnable()
     {
-        // ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®¸¦ Ã£¾Æ¼­ target¿¡ ÇÒ´ç
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Ã£ï¿½Æ¼ï¿½ targetï¿½ï¿½ ï¿½Ò´ï¿½
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         isLive = true;
         health = maxHealth;
@@ -71,9 +70,7 @@ public class Enemy : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //ÃÑ¾ËÀÎÁö ¾Æ´ÑÁö È®ÀÎ
         if (!collision.CompareTag("Bullet")) return;
-        //Ã¼·Â¿¡ µ¥¹ÌÁö¸¦ »©ÁÜ
         health -= collision.GetComponent<Bullet>().damage;
         if(health > 0)
         {
