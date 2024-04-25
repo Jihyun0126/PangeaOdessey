@@ -10,8 +10,8 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public Animator anim;
-    public LayerMask playerLayer; // �÷��̾� ���̾� ����ũ
-    public float detectionRadius = 5f; // ���� ���� ����
+    public LayerMask playerLayer;
+    public float detectionRadius = 5f;
 
     bool isLive;
     Rigidbody2D rigid;
@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviour
     void FixedUpdate()
     {
         if (!isLive) return;
-
         Vector2 dirVec = target.position - rigid.position; 
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
@@ -56,7 +55,6 @@ public class Enemy : MonoBehaviour
 
     void OnEnable()
     {
-        // �÷��̾� ������Ʈ�� ã�Ƽ� target�� �Ҵ�
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         isLive = true;
         health = maxHealth;
