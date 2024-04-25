@@ -53,28 +53,20 @@ public class Weapon : MonoBehaviour
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
-            case 1:
-                timer += Time.deltaTime;
+            case 1: //도끼 불러오기
+                timer += Time.deltaTime; 
                 if (timer > speed)
                 {
                     timer = 0f;
                     Axe();
                 }
                 break;
-            case 2:
+            case 2: //활 불러오기
                 timer += Time.deltaTime;
                 if (timer > speed)
                 {
                     timer = 0f;
                     Bow();
-                }
-                break;
-            case 3:
-                timer += Time.deltaTime;
-                if (timer > speed)
-                {
-                    timer = 0f;
-                    Fireball();
                 }
                 break;
             default:
@@ -95,9 +87,6 @@ public class Weapon : MonoBehaviour
             case 2:
                 speed = 1f; //공격 속도 조정, 낮을 수록 빠름
                 break;
-            case 3:
-                speed = 1f; //공격 속도 조정, 낮을 수록 빠름
-                break;
             default:
                 break;
         }
@@ -115,12 +104,6 @@ public class Weapon : MonoBehaviour
 
             bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // -1은 계속 관통
         }
-    }
-
-    void BatchSword() //검 배치하는 함수
-    {
-        Transform sword = GameManager.instance.pool.Get(prefabId).transform;
-        sword.parent = transform;
     }
     void Axe() //도끼 함수
     {
@@ -208,21 +191,4 @@ public class Weapon : MonoBehaviour
             sin * v.x + cos * v.y
         );
     }
-    void Fireball()
-    {
-        if (!player.scanner.nearestTarget)
-            return;
-
-        for (int index = 0; index < count; index++) { 
-        Vector3 targetPos = player.scanner.nearestTarget.position; //..위치
-        Vector3 dir = targetPos - player.transform.position; //..방향
-        dir = dir.normalized;
-
-        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.position = player.transform.position;
-        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
-        bullet.GetComponent<Bullet>().Init(damage, count, dir);
-        }
-    }
-
 }
