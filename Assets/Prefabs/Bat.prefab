@@ -185,6 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  health: 0
+  maxHealth: 0
+  animCon: []
   target: {fileID: 0}
   anim: {fileID: 0}
   playerLayer:
