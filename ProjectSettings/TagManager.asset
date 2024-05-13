@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Area
   - Enemy
+  - Enemy1
+  - Enemy2
+  - ball
   layers:
   - Default
   - TransparentFX
