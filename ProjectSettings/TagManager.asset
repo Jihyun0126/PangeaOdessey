@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ground
   - Area
+  - TargetImage
+  - Shop1
+  - Shop2
+  - Shop3
+  - Shop4
   layers:
   - Default
   - TransparentFX
