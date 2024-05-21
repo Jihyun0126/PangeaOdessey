@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour
     public float speed;
     public Rigidbody2D target;
     public Animator anim;
-    public LayerMask playerLayer; // ÇÃ·¹ÀÌ¾î ·¹ÀÌ¾î ¸¶½ºÅ©
-    public float detectionRadius = 5f; // °ø°Ý °¨Áö ¹üÀ§
+    public LayerMask playerLayer; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½Å©
+    public float detectionRadius = 5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     bool isLive = true;
     Rigidbody2D rigid;
@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
+
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -30,21 +32,21 @@ public class Enemy : MonoBehaviour
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
 
-        // ÇÃ·¹ÀÌ¾î °¨Áö ¹× °ø°Ý
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         DetectPlayerAndAttack();
     }
 
     void DetectPlayerAndAttack()
     {
-        // ÇÃ·¹ÀÌ¾î °¨Áö
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
         foreach (var hit in hits)
         {
             if (hit.CompareTag("Player"))
             {
-                // °ø°Ý ¸ð¼Ç Àç»ý
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
                 anim.SetTrigger("Attack");
-                break; // ÇÏ³ªÀÇ ÇÃ·¹ÀÌ¾î¸¸ °¨ÁöÇÏ¸é ·çÇÁ Á¾·á
+                break; // ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î¸¸ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
         }
     }

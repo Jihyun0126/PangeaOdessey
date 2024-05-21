@@ -7,32 +7,63 @@ public class Weapon : MonoBehaviour
     public int id;
     public int prefabId;
     public float damage;
+
     public int count;
     public float speed;
 
+
+
+    void Start()
+    {
+        Init();
+    }
+
     void Update()
     {
-        
+        switch (id)
+        {
+            case 0:
+                transform.Rotate(Vector3.back * speed * Time.deltaTime);
+                break;
+            case 1:
+                break;
+            default:
+                break;
+        }
     }
     public void Init()
     {
         switch (id)
         {
             case 0:
-                speed = -150;
-                Batch();
+                speed = 150;
+                BatchShield();
+                break;
+            case 1:
+                BatchSword();
                 break;
             default:
                 break;
         }
     }
-    void Batch() //방패 배치하는 함수
+    void BatchShield() //방패 배치하는 함수
     {
-        for(int index=0; index<count; index++)
+        for (int index = 0; index < count; index++)
         {
-            Transform bullet =GameManager.instance.pool.Get(prefabId).transform;
+            Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
             bullet.parent = transform;
+
+            Vector3 rotVec = Vector3.forward * 360 * index / count;
+            bullet.Rotate(rotVec);
+            bullet.Translate(bullet.up * 2f, Space.World);
+
             bullet.GetComponent<Bullet>().Init(damage, -1); // -1은 계속 관통
         }
+    }
+
+    void BatchSword() //검 배치하는 함수
+    {
+        Transform sword = GameManager.instance.pool.Get(prefabId).transform;
+        sword.parent = transform;
     }
 }

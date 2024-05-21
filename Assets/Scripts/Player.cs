@@ -37,12 +37,12 @@ public class Player : MonoBehaviour
                 //Debug.Log(collider.tag);
             }
             anim.SetTrigger("atk");
-            curTime = coolTime; // Äð´Ù¿îÀ» ´Ù½Ã ¼³Á¤
+            curTime = coolTime; // ï¿½ï¿½Ù¿ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
         }
         else
         {
-            curTime -= Time.deltaTime; // Äð´Ù¿î ½Ã°£ °¨¼Ò
+            curTime -= Time.deltaTime; // ï¿½ï¿½Ù¿ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
     }
 
@@ -56,20 +56,13 @@ public class Player : MonoBehaviour
     {
         anim.SetFloat("Speed", inputVec.magnitude);
 
-        if (inputVec.x != 0) // inputVec.x °ªÀÌ 0º¸´Ù Å« °æ¿ì
+        if (inputVec.x != 0) // inputVec.x ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½
         {
-            if (inputVec.x < 0)
-            {
-                transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            }
+            spriter.flipX = inputVec.x < 0;
         }
     }
 
-    void OnDrawGizmos() // ±ÙÁ¢°ø°Ý ¿µ¿ª¼³Á¤
+    void OnDrawGizmos() // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(pos.position, boxSize);
