@@ -77,6 +77,8 @@ public class Weapon : MonoBehaviour
                     Fireball();
                 }
                 break;
+            case 4:
+                   break;
             default:
                 break;
         }
@@ -97,6 +99,9 @@ public class Weapon : MonoBehaviour
                 break;
             case 3:
                 speed = 1f;
+                break;
+            case 4:
+                Waterball();
                 break;
             default:
                 break;
@@ -212,5 +217,11 @@ public class Weapon : MonoBehaviour
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
         bullet.GetComponent<Explosion>().Init(damage, dir);
+    }
+    void Waterball()
+    {
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.parent = transform;
+        bullet.GetComponent<Aura>().Init(damage);
     }
 }

@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public float speed;
+    public float originalSpeed; // 원래 속도를 저장할 변수
     public Rigidbody2D target;
     public Animator anim;
-    public LayerMask playerLayer; // 플레이어 레이어 마스크
-    public float detectionRadius = 5f; // 공격 감지 범위
+    public LayerMask playerLayer;
+    public float detectionRadius = 5f;
 
     bool isLive = true;
     Rigidbody2D rigid;
@@ -19,6 +18,9 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
+
+        // 시작할 때 원래 속도 저장
+        originalSpeed = speed;
     }
 
     void FixedUpdate()
@@ -36,15 +38,13 @@ public class Enemy : MonoBehaviour
 
     void DetectPlayerAndAttack()
     {
-        // 플레이어 감지
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
         foreach (var hit in hits)
         {
             if (hit.CompareTag("Player"))
             {
-                // 공격 모션 재생
                 anim.SetTrigger("Attack");
-                break; // 하나의 플레이어만 감지하면 루프 종료
+                break;
             }
         }
     }
@@ -52,5 +52,14 @@ public class Enemy : MonoBehaviour
     void LateUpdate()
     {
         spriter.flipX = target.position.x < rigid.position.x;
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Aura"))
+        {
+            // 범위를 벗어나면 원래 속도로 복원
+            speed = originalSpeed;
+        }
     }
 }
