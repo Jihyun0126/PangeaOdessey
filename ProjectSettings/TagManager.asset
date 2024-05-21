@@ -10,6 +10,7 @@ TagManager:
   - Enemy1
   - Enemy2
   - ball
+  - Aura
   layers:
   - Default
   - TransparentFX
