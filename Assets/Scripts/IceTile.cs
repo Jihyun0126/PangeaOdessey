@@ -1,76 +1,19 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using System.Collections.Generic;
 
-public class IceTilemap : MonoBehaviour
+public class IceTile : MonoBehaviour
 {
-    public Tilemap tilemap; // 타일맵 참조
-    public float iceDrag = 0.1f;  // 미끄러움 정도를 나타내는 값
-    public float activeTime = 5f;  // 빙판이 활성화되는 시간 (초)
-    public float inactiveTime = 5f;  // 빙판이 비활성화되는 시간 (초)
-    private bool isActive = true;
-    private float timer = 0f;
-    private List<Rigidbody2D> affectedRigidbodies = new List<Rigidbody2D>(); // 미끄러움 효과를 받은 리지드바디 목록
+    public float slipperyFriction = 0.1f; // 미끄러지는 효과로 변경될 마찰력 값
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 타이머 업데이트
-        timer += Time.deltaTime;
-
-        // 빙판 활성화/비활성화 조건 체크
-        if (isActive && timer >= activeTime)
+        if (collision.CompareTag("Player"))
         {
-            SetIceActive(false);
-            timer = 0f;
-        }
-        else if (!isActive && timer >= inactiveTime)
-        {
-            SetIceActive(true);
-            timer = 0f;
-        }
-    }
-
-    void SetIceActive(bool active)
-    {
-        isActive = active;
-        if (!isActive)
-        {
-            // 빙판이 비활성화될 때, 미끄러움 효과를 받은 모든 리지드바디의 drag를 원래대로 복원
-            foreach (Rigidbody2D rb in affectedRigidbodies)
+            // 플레이어가 빙판 타일에 진입할 때 마찰력을 변경합니다.
+            Rigidbody2D playerRigidbody = collision.GetComponent<Rigidbody2D>();
+            if (playerRigidbody != null)
             {
-                if (rb != null)
-                {
-                    rb.drag = 0f;  // 원래 drag 값 복원 (필요에 따라 조정)
-                }
+                playerRigidbody.sharedMaterial.friction = slipperyFriction; // 미끄러지는 효과로 변경될 마찰력 값으로 설정합니다.
             }
-            affectedRigidbodies.Clear(); // 목록 초기화
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!isActive) return;  // 빙판이 비활성화 상태일 경우 종료
-
-        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        if (rb != null && collision.gameObject.CompareTag("Ground"))
-        {
-            rb.drag = iceDrag;
-            if (!affectedRigidbodies.Contains(rb))
-            {
-                affectedRigidbodies.Add(rb); // 미끄러움 효과를 받은 리지드바디를 목록에 추가
-            }
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (!isActive) return;  // 빙판이 비활성화 상태일 경우 종료
-
-        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        if (rb != null && collision.gameObject.CompareTag("Ground"))
-        {
-            rb.drag = 0f;  // 원래 drag 값 복원 (필요에 따라 조정)
-            affectedRigidbodies.Remove(rb); // 목록에서 제거
         }
     }
 }
