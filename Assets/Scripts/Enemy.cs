@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
+        if (!isLive) return;
 
         Vector2 dirVec = target.position - rigid.position; 
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;

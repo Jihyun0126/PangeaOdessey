@@ -34,7 +34,7 @@ public class Aura : MonoBehaviour
         if (enemy != null)
         {
             // 적의 속도를 원래대로 복원
-            enemy.speed = enemy.originalSpeed;
+           // enemy.speed = enemy.originalSpeed;
         }
     }
 
