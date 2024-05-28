@@ -7,10 +7,7 @@ TagManager:
   - Ground
   - Area
   - Enemy
-  - Enemy1
-  - Enemy2
-  - ball
-  - Aura
+  - Bullet
   layers:
   - Default
   - TransparentFX

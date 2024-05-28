@@ -69,16 +69,6 @@ public class Weapon : MonoBehaviour
                     Bow();
                 }
                 break;
-            case 3:
-                timer += Time.deltaTime;
-                if (timer > speed)
-                {
-                    timer = 0f;
-                    Fireball();
-                }
-                break;
-            case 4:
-                   break;
             default:
                 break;
         }
@@ -96,12 +86,6 @@ public class Weapon : MonoBehaviour
                 break;
             case 2:
                 speed = 1f; //공격 속도 조정, 낮을 수록 빠름
-                break;
-            case 3:
-                speed = 1f;
-                break;
-            case 4:
-                Waterball();
                 break;
             default:
                 break;
@@ -178,6 +162,7 @@ public class Weapon : MonoBehaviour
             }
         }
     }
+
     void FireBullet(Vector2 direction, float angle)
     {
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
@@ -205,23 +190,5 @@ public class Weapon : MonoBehaviour
             cos * v.x - sin * v.y,
             sin * v.x + cos * v.y
         );
-    }
-    void Fireball()
-    {
-        if (!player.scanner.nearestTarget)
-            return;
-        Vector3 targetPos = player.scanner.nearestTarget.position;
-        Vector3 dir = targetPos - transform.position;
-
-        dir = dir.normalized;
-        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.position = transform.position;
-        bullet.GetComponent<Explosion>().Init(damage, dir);
-    }
-    void Waterball()
-    {
-        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.parent = transform;
-        bullet.GetComponent<Aura>().Init(damage);
     }
 }
