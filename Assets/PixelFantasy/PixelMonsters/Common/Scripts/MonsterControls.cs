@@ -8,7 +8,7 @@ namespace Assets.PixelFantasy.PixelMonsters.Common.Scripts
         public CharacterController Controller; // https://docs.unity3d.com/ScriptReference/CharacterController.html
         public float RunSpeed = 1f;
         public float JumpSpeed = 3f;
-        public float Gravity = 0.2f;
+        public float Gravity = -0.2f;
         public ParticleSystem MoveDust;
         public ParticleSystem JumpDust;
 
