@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 10000
+  health: 10
   maxHealth: 3
   animCon:
   - {fileID: 9100000, guid: 557d0cda79f73de4cb6da66655cb8f96, type: 2}
