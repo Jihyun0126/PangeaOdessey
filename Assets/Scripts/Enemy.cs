@@ -1,65 +1,130 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    SpriteRenderer sr;
     public float speed;
-    public float originalSpeed; // ¿ø·¡ ¼Óµµ¸¦ ÀúÀåÇÒ º¯¼ö
+    public float health;
+    public float maxHealth;
+    public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public Animator anim;
-    public LayerMask playerLayer;
-    public float detectionRadius = 5f;
+    public LayerMask playerLayer; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½Å©
+    public float detectionRadius = 5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    
 
-    bool isLive = true;
+    bool isLive;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
+    WaitForFixedUpdate wait;
+    Collider2D coll;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
-
-        // ½ÃÀÛÇÒ ¶§ ¿ø·¡ ¼Óµµ ÀúÀå
-        originalSpeed = speed;
+        wait = new WaitForFixedUpdate();
+        coll = GetComponent<Collider2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
     {
-        if (!isLive) return;
+        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
 
-        Vector2 dirVec = target.position - rigid.position;
+        Vector2 dirVec = target.position - rigid.position; 
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
-
-        // ÇÃ·¹ÀÌ¾î °¨Áö ¹× °ø°Ý
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         DetectPlayerAndAttack();
     }
 
     void DetectPlayerAndAttack()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
-        foreach (var hit in hits)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
+        foreach (Collider2D collider in colliders)
         {
-            if (hit.CompareTag("Player"))
+            if (collider.CompareTag("Player"))
             {
+                // ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                // ï¿½ï¿½ï¿½â¿¡ ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.
                 anim.SetTrigger("Attack");
-                break;
             }
         }
     }
-
     void LateUpdate()
     {
+        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
         spriter.flipX = target.position.x < rigid.position.x;
     }
-
-    void OnTriggerExit2D(Collider2D collision)
+    void OnEnable()
     {
-        if (collision.CompareTag("Aura"))
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Ã£ï¿½Æ¼ï¿½ targetï¿½ï¿½ ï¿½Ò´ï¿½
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        isLive = true;
+        coll.enabled = true;
+        rigid.simulated = true;
+        spriter.sortingOrder = 2;
+        anim.SetBool("Death",false);
+        health = maxHealth;
+    }
+    public void Init(SpawnData data)
+    {
+        anim.runtimeAnimatorController = animCon[data.spriteType];
+        speed = data.speed;
+        maxHealth = data.health;
+        health = data.health;
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+        if (!collision.CompareTag("Bullet")) return;
+        //Ã¼ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        health -= collision.GetComponent<Bullet>().damage;
+        StartCoroutine(KnockBack());
+        StartCoroutine(Alphablink());
+        if(health > 0)
         {
-            // ¹üÀ§¸¦ ¹þ¾î³ª¸é ¿ø·¡ ¼Óµµ·Î º¹¿ø
-            speed = originalSpeed;
+            anim.SetTrigger("Hit");
+        }
+        else
+        {
+            isLive = false;
+            coll.enabled = false;
+            rigid.simulated = false;
+            spriter.sortingOrder = 1;
+            anim.SetBool("Death",true);
+            //dropCoin();
         }
     }
+    IEnumerator KnockBack()
+    {
+        yield return wait;
+        Vector3 playerPos = GameManager.instance.player.transform.position;
+        Vector3 dirVec = transform.position - playerPos;
+        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse); //ï¿½ï¿½ï¿½ Å©ï¿½ï¿½
+        Debug.Log("ï¿½Ë¹ï¿½");
+    }
+    IEnumerator Alphablink()
+    {
+        yield return new WaitForSeconds(0.1f);
+        sr.color = new Color(1, 1, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        sr.color = new Color(1, 1, 1, 1);
+
+    }
+    /*
+    void dropCoin()
+    {
+        Vector2 dirVec = 
+    }*/
+    void Dead()
+    {
+        gameObject.SetActive(false);
+    }
 }
+
