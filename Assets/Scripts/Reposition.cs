@@ -16,7 +16,7 @@ public class Reposition : MonoBehaviour
             
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 myPos = transform.position;
-    
+        Vector3 playerDir = GameManager.instance.player.inputVec;
         switch (transform.tag) {
             case "Ground":
                 float diffX = playerPos.x - myPos.x;
