@@ -161,7 +161,7 @@ Animator:
   m_GameObject: {fileID: 1751607183848512831}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 557d0cda79f73de4cb6da66655cb8f96, type: 2}
+  m_Controller: {fileID: 22100000, guid: cd37ff0a7cc254b44979818c3ac72de3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -185,13 +185,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 2
+  health: 10000
   maxHealth: 3
   animCon:
   - {fileID: 9100000, guid: 557d0cda79f73de4cb6da66655cb8f96, type: 2}
   - {fileID: 22100000, guid: 896930a0f3945d944b9b039ba83bd00c, type: 2}
   - {fileID: 22100000, guid: eea0172e6c1e74a47bcb3c6bceeaa063, type: 2}
   - {fileID: 22100000, guid: 62d64dd839f88cf46b7a5a4c565f4dea, type: 2}
+  - {fileID: 22100000, guid: 3f5c8c9a4d8cbc947b63980e8cea6ac8, type: 2}
+  - {fileID: 22100000, guid: ef186ee06591da545844a5c524c7cbd6, type: 2}
+  - {fileID: 22100000, guid: 437790cb54ceea54eb580964e05ab587, type: 2}
+  - {fileID: 22100000, guid: cd37ff0a7cc254b44979818c3ac72de3, type: 2}
+  - {fileID: 22100000, guid: 9398d4a145b9adf438d98676d3a16b2a, type: 2}
+  - {fileID: 22100000, guid: 88c116f69fd93a94e8c98e84af994259, type: 2}
+  - {fileID: 22100000, guid: 5ec6a5220daa0094ab72db0edfd45a9f, type: 2}
+  - {fileID: 22100000, guid: f7c93c6827b097d47b2b653209f0b73e, type: 2}
+  - {fileID: 22100000, guid: 8200385395e269e40a4c2ee30e7681b6, type: 2}
+  - {fileID: 22100000, guid: 0281fced25e9f4b468ccbee22563b806, type: 2}
+  - {fileID: 22100000, guid: c0fb5be2beee1f2449217eb989f11027, type: 2}
+  - {fileID: 22100000, guid: 19407e56bbe781846b91f73b4fd4d7c8, type: 2}
   target: {fileID: 0}
   anim: {fileID: 0}
   playerLayer:
