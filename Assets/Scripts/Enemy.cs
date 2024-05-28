@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
     public Animator anim;
-    public LayerMask playerLayer; // ÇÃ·¹ÀÌ¾î ·¹ÀÌ¾î ¸¶½ºÅ©
-    public float detectionRadius = 5f; // °ø°Ý °¨Áö ¹üÀ§
+    public LayerMask playerLayer; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½Å©
+    public float detectionRadius = 5f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     
 
     bool isLive;
@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
-        // ÇÃ·¹ÀÌ¾î °¨Áö ¹× °ø°Ý
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         DetectPlayerAndAttack();
     }
 
@@ -50,8 +50,8 @@ public class Enemy : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                // ÇÃ·¹ÀÌ¾î¸¦ °¨ÁöÇßÀ» ¶§ÀÇ µ¿ÀÛ
-                // ¿©±â¿¡ ÇÃ·¹ÀÌ¾î¸¦ °ø°ÝÇÏ´Â ·ÎÁ÷À» Ãß°¡ÇÏ¼¼¿ä.
+                // ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                // ï¿½ï¿½ï¿½â¿¡ ï¿½Ã·ï¿½ï¿½Ì¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.
                 anim.SetTrigger("Attack");
             }
         }
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
     }
     void OnEnable()
     {
-        // ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®¸¦ Ã£¾Æ¼­ target¿¡ ÇÒ´ç
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Ã£ï¿½Æ¼ï¿½ targetï¿½ï¿½ ï¿½Ò´ï¿½
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         isLive = true;
         coll.enabled = true;
@@ -81,9 +81,9 @@ public class Enemy : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //ÃÑ¾ËÀÎÁö ¾Æ´ÑÁö È®ÀÎ
+        //ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         if (!collision.CompareTag("Bullet")) return;
-        //Ã¼·Â¿¡ µ¥¹ÌÁö¸¦ »©ÁÜ
+        //Ã¼ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         health -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
         StartCoroutine(Alphablink());
@@ -98,7 +98,7 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Death",true);
-            dropCoin();
+            //dropCoin();
         }
     }
     IEnumerator KnockBack()
@@ -106,8 +106,8 @@ public class Enemy : MonoBehaviour
         yield return wait;
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse); //³ì¹é Å©±â
-        Debug.Log("³Ë¹é");
+        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse); //ï¿½ï¿½ï¿½ Å©ï¿½ï¿½
+        Debug.Log("ï¿½Ë¹ï¿½");
     }
     IEnumerator Alphablink()
     {
