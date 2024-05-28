@@ -98,6 +98,7 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Death",true);
+            dropCoin();
         }
     }
     IEnumerator KnockBack()
@@ -116,7 +117,11 @@ public class Enemy : MonoBehaviour
         sr.color = new Color(1, 1, 1, 1);
 
     }
-
+    /*
+    void dropCoin()
+    {
+        Vector2 dirVec = 
+    }*/
     void Dead()
     {
         gameObject.SetActive(false);
