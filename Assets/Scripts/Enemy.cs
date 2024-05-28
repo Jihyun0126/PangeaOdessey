@@ -98,7 +98,7 @@ public class Enemy : MonoBehaviour
             rigid.simulated = false;
             spriter.sortingOrder = 1;
             anim.SetBool("Death",true);
-            dropCoin();
+            //dropCoin();
         }
     }
     IEnumerator KnockBack()
