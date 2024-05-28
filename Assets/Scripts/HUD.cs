@@ -9,12 +9,17 @@ public class HUD : MonoBehaviour
     public Infotype type;
 
     Text myText;
-    Slider mySlider;
+    public Slider mySlider;
 
     void Awake()
     { 
         myText = GetComponent<Text>();
         mySlider = GetComponent<Slider>();
+
+        if (mySlider == null)
+    {
+        Debug.LogError("Slider component not found!");
+    }
     }
     
     void LateUpdate()
@@ -24,7 +29,6 @@ public class HUD : MonoBehaviour
 
                 break;
           
-                 
             case Infotype.Kill:
                 myText.text = string.Format("{0:F0}", GameManager.instance.kill); // GameManager에서 코드 추가해야함
                 break;
@@ -34,13 +38,17 @@ public class HUD : MonoBehaviour
                 int sec = Mathf.FloorToInt(remainTime % 60);
                 myText.text = string.Format("{0:D2}:{1:D2}", min, sec);
                 break;
-            case Infotype.Health:
-                float curHealth = GameManager.instance.health;
-                float maxHealth = GameManager.instance.maxHealth;
-                mySlider.value = curHealth / maxHealth;
-
+        case Infotype.Health:
+                UpdateHealthUI();
                 break;
 
         }
+    }
+     void UpdateHealthUI()
+    {
+        float curHealth = GameManager.instance.health;
+        float maxHealth = GameManager.instance.maxHealth;
+        mySlider.value = curHealth / maxHealth;
+        Debug.Log("Slider value: " + mySlider.value);
     }
 }
