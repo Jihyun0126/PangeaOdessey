@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Scorpion
+  m_Controller: {fileID: 9100000, guid: 557d0cda79f73de4cb6da66655cb8f96, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dd86491578403dc49bc549a3fdff54a9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e6ba8433e7e4f4544a265245bc295ff9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 276bf62850b760145978e5e5c37498ba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aa0a22874574e944a946d703879cc222, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 82d5810f2ee63094c848086573c21755, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 444dd6a655e49ec479bd2b94f4ee6bb3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 100a8b90ca9b8344fbb46d6605eb95e0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 72dc48a1abe43914cb3c8eefa1eaf300, type: 2}
