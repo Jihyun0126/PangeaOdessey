@@ -15,7 +15,9 @@ public class Bullet : MonoBehaviour
     }
     void Update()
     {
-        Dead();
+        if (gameObject.CompareTag("Bullet")) {
+            Dead();
+        }
     }
 
     public void Init(float damage, int per, Vector3 dir)
