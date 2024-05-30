@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject itemPrefab;
     SpriteRenderer sr;
     public float speed;
     public float health;
@@ -117,11 +118,21 @@ public class Enemy : MonoBehaviour
         sr.color = new Color(1, 1, 1, 1);
 
     }
-    /*
-    void dropCoin()
+    // 몬스터가 죽을 때 아이템을 드랍하는 함수
+    void DropItem()
     {
-        Vector2 dirVec = 
-    }*/
+        // 아이템 프리팹을 생성하고 위치를 몬스터 위치로 설정
+        GameObject itemGo = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+        // 활성화하지 않고 설정
+        itemGo.SetActive(false);
+        // 몬스터가 죽은 후 아이템을 활성화하도록 설정
+        Action onDie = () =>
+        {
+            itemGo.SetActive(true);
+        };
+        // 몬스터의 Death 애니메이션이 완료되면 아이템을 활성화
+        anim.GetComponent<AnimationEvent>().AddEvent("Death", onDie);
+    }
     void Dead()
     {
         gameObject.SetActive(false);
