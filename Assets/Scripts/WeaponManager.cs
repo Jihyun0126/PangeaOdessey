@@ -14,8 +14,10 @@ public class WeaponManager : MonoBehaviour
 
     void Start()
     {
-
+        
     }
+
+
 
    
    
