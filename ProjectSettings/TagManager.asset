@@ -12,6 +12,7 @@ TagManager:
   - ball
   - Aura
   - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX
