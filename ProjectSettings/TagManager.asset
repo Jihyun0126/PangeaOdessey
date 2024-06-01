@@ -11,6 +11,7 @@ TagManager:
   - Shop2
   - Shop3
   - Shop4
+  - Gold
   layers:
   - Default
   - TransparentFX

@@ -5,25 +5,30 @@ using UnityEngine.UI;
 
 public class StoreUIManager : MonoBehaviour
 {
+    GameObject Gold;
     public Text StoreGrade;
-    public Text GoldText;
-    public int Gold;
+    public int totalGold;
     Color textcolor;
     Button upGradeButton;
     Button rerollButton;
+    int storeGradeId;
     // Start is called before the first frame update
     void Start(){
+        totalGold = 100;
+        storeGradeId = 1;
+        this.Gold = GameObject.FindWithTag("Gold");
         upGradeButton = GameObject.Find("ShopUpgrade").GetComponent<Button>();
         rerollButton = GameObject.Find("RerollButton").GetComponent<Button>();
     }
     void Update(){
-        GoldText.text = Gold.ToString();
-        if(Gold < 1500){
-            upGradeButton.interactable =false;
+        this.Gold.GetComponent<Text>().text = totalGold.ToString();
+        if(totalGold < 1500 && storeGradeId == 1){
+            upGradeButton.enabled =false;
         }else{
+            upGradeButton.enabled =true;
             upGradeButton.interactable =true;
         }
-        if(Gold < 1500){
+        if(totalGold < 50){
             rerollButton.interactable =false;
         }else{
             rerollButton.interactable =true;
@@ -32,17 +37,22 @@ public class StoreUIManager : MonoBehaviour
 
     public void UpgradeText()
     {
-        if(Gold >= 1500){
+        if(totalGold >= 1500){
             textcolor = new Color32(0,0,255,255);
             StoreGrade.text = "2단계 상점";
             StoreGrade.color = textcolor;
-            Gold += -1500;
+            totalGold += -1500;
+            storeGradeId = 2;
+            upGradeButton.interactable =false;
         }
     }
 
-    public void Reroll(){
-        Gold += -50;
-        GoldText.text = Gold.ToString();
+    public void RerollGold(){
+        if(totalGold >= 50)
+            totalGold += -50;
     }
-    
+
+    public void UpGold(){
+        totalGold += 1000;
+    }
 }
