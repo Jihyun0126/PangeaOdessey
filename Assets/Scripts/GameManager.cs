@@ -1,6 +1,7 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     [Header(" Game Object")]
     public PoolManager pool;
     public Player player;
+    public Text gold;
+    public Text timer;
 
     void Awake()
     {
@@ -31,10 +34,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         gameTime += Time.deltaTime;
-
+        TimeSpan timeSpan = TimeSpan.FromSeconds(gameTime);
+        string timeString = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
+        timer.text = timeString;
         if (gameTime > maxGameTime) {
             
         }
+
+        gold.text = bitCoin.ToString()+ "G";
     }
     public void TakeDamage(float amount)
     {

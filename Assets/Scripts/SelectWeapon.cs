@@ -16,6 +16,7 @@ public class SelectWeapon : MonoBehaviour
     public Text weaponName;
     public Text weaponInfo;
 
+
     void Start()
     {
         weaponImages = new Sprite[6];
@@ -51,7 +52,7 @@ public class SelectWeapon : MonoBehaviour
         foreach(var data in weaponDatas){
             if(data.id == SelectId){
                 weaponName.text = data.name;
-                weaponInfo.text = "데미지 : " + data.damage + "\n" +
+                weaponInfo.text = "데미지 : " + data.damage + "\t 가격 : " + data.price + "\n" +
                     "속성 : "+ data.property;
             }
         }
