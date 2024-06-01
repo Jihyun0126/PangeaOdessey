@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 6266149946410416623, guid: 37915cfc8f781a74c8ca03134d6e27cb, type: 3}
     - target: {fileID: 8128435325027706600, guid: 0e30da3944bec0844a2a7921c0a7e22c, type: 3}
       propertyPath: m_Name
-      value: PoolManagerMgress
+      value: PoolManagerMGrass
       objectReference: {fileID: 0}
     - target: {fileID: 8128435325027706600, guid: 0e30da3944bec0844a2a7921c0a7e22c, type: 3}
       propertyPath: m_IsActive
