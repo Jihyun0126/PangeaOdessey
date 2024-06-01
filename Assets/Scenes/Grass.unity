@@ -663,6 +663,11 @@ MonoBehaviour:
   damage: 7
   count: 5
   speed: 0
+--- !u!4 &798030131 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6880261564947858009, guid: 3b2dc0e5349c03346b9f6ba88709de25, type: 3}
+  m_PrefabInstance: {fileID: 8149692970389958593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1148196207
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +947,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2158611122094458675, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       insertIndex: -1
       addedObject: {fileID: 502680853}
+    - targetCorrespondingSourceObject: {fileID: 2158611122094458675, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 798030131}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 933428860942890658, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       insertIndex: -1
@@ -1260,7 +1268,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1214918034}
     m_Modifications:
     - target: {fileID: 7892250871435895459, guid: 3b2dc0e5349c03346b9f6ba88709de25, type: 3}
       propertyPath: m_Name
@@ -1309,68 +1317,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7892250871435895459, guid: 3b2dc0e5349c03346b9f6ba88709de25, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8149692970389958595}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b2dc0e5349c03346b9f6ba88709de25, type: 3}
---- !u!1 &8149692970389958594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7892250871435895459, guid: 3b2dc0e5349c03346b9f6ba88709de25, type: 3}
-  m_PrefabInstance: {fileID: 8149692970389958593}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &8149692970389958595
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8149692970389958594}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 20, y: 20}
-  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1148196211}
   - {fileID: 1567598082}
-  - {fileID: 8149692970389958593}
   - {fileID: 170115791}
   - {fileID: 1430573308}
   - {fileID: 1214918032}
