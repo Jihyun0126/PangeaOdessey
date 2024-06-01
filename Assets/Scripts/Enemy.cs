@@ -119,6 +119,7 @@ public class Enemy : MonoBehaviour
 
     }
     // 몬스터가 죽을 때 아이템을 드랍하는 함수
+    /*
     void DropItem()
     {
         // 아이템 프리팹을 생성하고 위치를 몬스터 위치로 설정
@@ -132,7 +133,7 @@ public class Enemy : MonoBehaviour
         };
         // 몬스터의 Death 애니메이션이 완료되면 아이템을 활성화
         anim.GetComponent<AnimationEvent>().AddEvent("Death", onDie);
-    }
+    }*/
     void Dead()
     {
         gameObject.SetActive(false);
