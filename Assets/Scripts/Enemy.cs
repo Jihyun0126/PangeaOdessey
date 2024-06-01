@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
         // 플레이어 감지 및 공격
-        DetectPlayerAndAttack();
+        //DetectPlayerAndAttack();
     }
 
     void DetectPlayerAndAttack()

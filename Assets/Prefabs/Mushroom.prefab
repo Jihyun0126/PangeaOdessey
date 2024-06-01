@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 677337129698957178}
   - component: {fileID: 7341029528664571713}
   - component: {fileID: 575422997932298216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mushroom
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f075f961f4fbc4684f9b354a37a806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 0}
   speed: 2
   health: 10
   maxHealth: 3
@@ -274,6 +275,10 @@ PrefabInstance:
     - target: {fileID: 8977892242327406477, guid: 86abfdcd22282ea4986e3f882afbf33c, type: 3}
       propertyPath: m_Name
       value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977892242327406477, guid: 86abfdcd22282ea4986e3f882afbf33c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8977892242327406477, guid: 86abfdcd22282ea4986e3f882afbf33c, type: 3}
       propertyPath: m_IsActive
