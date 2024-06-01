@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        bitCoin = 0;
     }
 
     void Update()
