@@ -38,9 +38,4 @@ public class PoolManager : MonoBehaviour
         return select;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

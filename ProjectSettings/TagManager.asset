@@ -6,20 +6,19 @@ TagManager:
   tags:
   - Ground
   - Area
-  - TargetImage
-  - Shop1
-  - Shop2
-  - Shop3
-  - Shop4
-  - Gold
+  - Enemy
+  - Enemy1
+  - Enemy2
+  - ball
+  - Aura
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - Bullet
   - 
   - 
   - 
