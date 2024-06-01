@@ -11,6 +11,8 @@ TagManager:
   - Enemy2
   - ball
   - Aura
+  - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX
