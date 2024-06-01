@@ -10,8 +10,9 @@ public class SelectWeapon : MonoBehaviour
     public Sprite[] weaponImages;
     public WeaponData[] weaponDatas;
     public int HolderIndex;
-    public int SelectId;
+    public int SelectId;    
 
+    GameObject obj;
     public Text weaponName;
     public Text weaponInfo;
 
@@ -45,9 +46,10 @@ public class SelectWeapon : MonoBehaviour
     }
 
     public void SetWeaponInfo(){
+        obj = GameObject.Find("BuyButton");
+        obj.GetComponent<WeaponManager>().weaponId = SelectId;
         foreach(var data in weaponDatas){
             if(data.id == SelectId){
-                
                 weaponName.text = data.name;
                 weaponInfo.text = "데미지 : " + data.damage + "\n" +
                     "속성 : "+ data.property;
