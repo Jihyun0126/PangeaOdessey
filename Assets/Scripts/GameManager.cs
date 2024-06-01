@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float gameTime;
     public float maxGameTime = 2 * 10f;
     [Header("# Player info")]
+    public static int bitCoin = 0;
     public float health = 100f; // int -> float
     public float maxHealth = 100f; // int -> float
     public int kill;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        bitCoin = 0;
     }
 
     void Update()

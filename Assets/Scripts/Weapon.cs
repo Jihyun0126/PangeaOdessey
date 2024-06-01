@@ -24,7 +24,6 @@ public class Weapon : MonoBehaviour
     void Awake()
     {
         player = GetComponentInParent<Player>();
-
     }
 
 
