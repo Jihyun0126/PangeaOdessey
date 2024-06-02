@@ -57,25 +57,20 @@ public class WeaponManager : MonoBehaviour
             return;
         }
         int soldWeaponId = inventory[0].id;
-        // 판매할 무기를 제거하고 해당 슬롯을 비활성화합니다.
-        inventory.RemoveAt(0);
-        itemSlots[0].sprite = null;
-        itemSlots[0].enabled = false;
 
         // 판매된 무기의 ID를 가져와 해당 무기를 비활성화합니다.
         UnActivateWeapon(soldWeaponId);
-        UpdateSlot();
 
         // 인벤토리의 무기들을 한 칸씩 앞으로 땡깁니다.
         for(int i = 1; i < inventory.Count; i++){
             inventory[i - 1] = inventory[i];
-            
-        } Debug.Log(inventory.Count);
+        }
         // 마지막 칸은 무기를 판매하여 비어있으므로, 마지막 무기를 삭제합니다.
         
-        //inventory.RemoveAt(inventory.Count - 1);
+        inventory.RemoveAt(inventory.Count - 1);
 
         // 업데이트된 인벤토리를 반영하여 슬롯을 업데이트합니다.
+        Debug.Log("현재 아이템 수 : " + inventory.Count);
         UpdateSlot();
     }
 
