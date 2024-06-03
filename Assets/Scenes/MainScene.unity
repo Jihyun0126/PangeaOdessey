@@ -5418,7 +5418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 870509490}
+      - m_Target: {fileID: 1047939074}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5430,9 +5430,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 870509490}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 740149158}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5910,9 +5922,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 831594119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798f67cab9947d247a9aed8a3a28dca1, type: 3}
+  m_Script: {fileID: 11500000, guid: f97ebb3693406cc4a8afbb8f35a3fff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlphaThreshold: 0.4
 --- !u!114 &831594122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6068,9 +6081,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 835713549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798f67cab9947d247a9aed8a3a28dca1, type: 3}
+  m_Script: {fileID: 11500000, guid: f97ebb3693406cc4a8afbb8f35a3fff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlphaThreshold: 0.4
 --- !u!114 &835713552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7681,9 +7695,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1148909694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798f67cab9947d247a9aed8a3a28dca1, type: 3}
+  m_Script: {fileID: 11500000, guid: f97ebb3693406cc4a8afbb8f35a3fff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlphaThreshold: 0.4
 --- !u!114 &1148909697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13288,9 +13303,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2081219584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798f67cab9947d247a9aed8a3a28dca1, type: 3}
+  m_Script: {fileID: 11500000, guid: f97ebb3693406cc4a8afbb8f35a3fff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlphaThreshold: 0.4
 --- !u!114 &2081219587
 MonoBehaviour:
   m_ObjectHideFlags: 0
