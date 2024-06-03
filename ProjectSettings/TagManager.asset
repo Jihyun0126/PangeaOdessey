@@ -3,25 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
-  - Area
-  - Enemy
-  - Enemy1
-  - Enemy2
-  - ball
-  - Aura
-  - Bullet
-  - Item
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemy
+  - 
   - Water
   - UI
-  - Bullet
-  - Enemy
+  - 
+  - 
   - 
   - 
   - 
