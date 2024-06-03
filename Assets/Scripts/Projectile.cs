@@ -1,17 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     Vector3 targetPosition;
     public float speed;
+    public float damage; // 발사체의 데미지
 
     private bool facingRight = true;
 
-    private void Start()
+    public void Initialize(Vector3 target, float damageAmount)
     {
-        targetPosition = FindObjectOfType<Player>().transform.position;
+        targetPosition = target;
+        damage = damageAmount;
 
         // Set initial facing direction
         if (targetPosition.x < transform.position.x)
@@ -48,5 +48,14 @@ public class Projectile : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            GameManager.instance.TakeDamage(damage);
+            Destroy(gameObject); // 발사체 충돌 시 파괴
+        }
     }
 }

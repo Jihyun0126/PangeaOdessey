@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    public enum Infotype { Exp, Level, Kill, Time, Health }
+    public enum Infotype { Exp, Level, Kill, Time, Health, BossHP }
     public Infotype type;
 
     Text myText;
@@ -44,6 +44,10 @@ public class HUD : MonoBehaviour
             case Infotype.Health:
                 UpdateHealthUI();
                 break;
+
+            case Infotype.BossHP:
+                UpdateBossHPUI();
+                break;
         }
     }
 
@@ -55,11 +59,11 @@ public class HUD : MonoBehaviour
         Debug.Log("Slider value: " + mySlider.value);
     }
 
-    public void SetHealthUIVisible(bool visible)
+    void UpdateBossHPUI()
     {
-        if (mySlider != null)
-        {
-            mySlider.gameObject.SetActive(visible);
-        }
+    float curBossHealth = GameManager.instance.bossHealth;
+    float maxBossHealth = GameManager.instance.maxBossHealth;
+    mySlider.value = curBossHealth / maxBossHealth;
+    Debug.Log("Boss HP Slider value: " + mySlider.value);
     }
 }

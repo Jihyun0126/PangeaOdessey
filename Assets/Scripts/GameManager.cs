@@ -23,11 +23,9 @@ public class GameManager : MonoBehaviour
     public float spawnRadius = 5f; // 플레이어 주위 스폰 반경
     private bool bossSpawned = false; // 보스가 한 번만 스폰되도록 설정
 
-    [Header("# Projectile Info")]
-    public GameObject projectilePrefab; // 프로젝타일 프리팹
-    public float projectileSpawnInterval = 2f; // 프로젝타일 생성 간격
-    public float projectileSpawnDistance = 10f; // 프로젝타일 생성 거리
-    private float lastProjectileSpawnTime;
+    [Header("# Boss Health")]
+    public float bossHealth;
+    public float maxBossHealth;
 
     void Awake()
     {
@@ -56,27 +54,18 @@ public class GameManager : MonoBehaviour
         {
             // 게임 오버 로직을 여기에 추가합니다.
         }
-
-        // 플레이어와 보스의 거리를 계산하여 일정 거리 이상 멀어지면 projectile을 생성합니다.
-        if (bossSpawned)
-        {
-            float distanceToPlayer = Vector2.Distance(player.transform.position, bossPrefab.transform.position);
-            if (distanceToPlayer > projectileSpawnDistance && Time.time > lastProjectileSpawnTime + projectileSpawnInterval)
-            {
-                SpawnProjectile();
-                lastProjectileSpawnTime = Time.time;
-            }
-        }
     }
 
     void SpawnBoss()
     {
         Vector2 spawnPosition = (Vector2)player.transform.position + Random.insideUnitCircle * spawnRadius;
-        Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-
+        GameObject boss = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
         
+        // 보스 체력 설정
+        BossControls bossControls = boss.GetComponent<BossControls>();
+        maxBossHealth = bossControls.health;
+        bossHealth = maxBossHealth;
 
-        
         if (bossHUD != null)
         {
             bossHUD.SetActive(true); // 보스가 스폰될 때 HP UI 활성화
@@ -84,16 +73,28 @@ public class GameManager : MonoBehaviour
         bossSpawned = true; // 보스를 한 번만 스폰되도록 설정
     }
 
-    void SpawnProjectile()
-    {
-        Vector2 spawnPosition = bossPrefab.transform.position; // 보스 위치에서 생성
-        Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
-    }
-
     public void TakeDamage(float amount)
     {
         health -= amount;
         if (health < 0) health = 0;
         Debug.Log("Health after damage: " + health);
+
+        // 필요 시 플레이어가 죽었을 때 로직 추가
+        if (health <= 0)
+        {
+            PlayerDead();
+        }
+    }
+
+    void PlayerDead()
+    {
+        // 플레이어가 죽었을 때 처리할 로직을 여기에 추가합니다.
+        Debug.Log("Player is Dead. Game Over.");
+        // 예: 게임 오버 화면 활성화, 게임 오버 사운드 재생 등
+    }
+
+    public void UpdateBossHealth(float amount)
+    {
+        bossHealth = amount;
     }
 }
