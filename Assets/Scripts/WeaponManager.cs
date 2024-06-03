@@ -14,6 +14,11 @@ public class WeaponManager : MonoBehaviour
 
     public Image[] itemSlots;
     public GameObject[] weaponObjects;
+    public Text inventoryInfo;
+    public int slotNumber;
+    int selectInventory;
+
+    GameObject obj;
 
     void Start(){
         this.weaponId = 0; 
@@ -24,6 +29,10 @@ public class WeaponManager : MonoBehaviour
     }
 
     public void BuyWeapon(){
+        // 중복되는 무기종류가 있는지 확인
+        
+
+        //인벤토리가 비었는지 확인
         if(weaponId > 0){
             if(inventory.Count >= inventorySize){
                 Debug.Log("인벤토리가 가득 찼습니다.");
@@ -33,6 +42,13 @@ public class WeaponManager : MonoBehaviour
             int id = weaponId;
             foreach(var weapon in weaponDatas){
                 if(id == weapon.id){
+                    // 중복되는 무기종류가 있는지 확인
+                    foreach(var item in inventory){
+                        if(item.category == weapon.category){
+                            Debug.Log("중복되는 종류의 무기가 있습니다.");
+                            return;
+                        }
+                    }
                     if(GameManager.bitCoin >= weapon.price){
                         GameManager.bitCoin -= weapon.price;
                     }else{
@@ -52,17 +68,22 @@ public class WeaponManager : MonoBehaviour
     public void SellWeapon(){
         Debug.Log(inventory.Count);
         int n = inventory.Count;
+
+        //판매할 인벤토리 인덱스 slotNumber
+
         if(inventory.Count == 0){
             Debug.Log("인벤토리에 아무 무기도 없습니다.");
             return;
         }
-        int soldWeaponId = inventory[0].id;
+        int soldWeaponId = inventory[slotNumber].id;
+        
+        GameManager.bitCoin += inventory[slotNumber].price / 2;
 
         // 판매된 무기의 ID를 가져와 해당 무기를 비활성화합니다.
         UnActivateWeapon(soldWeaponId);
 
         // 인벤토리의 무기들을 한 칸씩 앞으로 땡깁니다.
-        for(int i = 1; i < inventory.Count; i++){
+        for(int i = slotNumber + 1; i < inventory.Count; i++){
             inventory[i - 1] = inventory[i];
         }
         // 마지막 칸은 무기를 판매하여 비어있으므로, 마지막 무기를 삭제합니다.
@@ -112,6 +133,32 @@ public class WeaponManager : MonoBehaviour
         }
         
     }
+    public void SetInventoryInfo(){
+        selectInventory = slotNumber;
+        Debug.Log("선택한 인벤토리 인덱스: " + selectInventory);
+        
+        // slotNumber가 유효한 인덱스 범위 내에 있는지 확인합니다.
+        if (selectInventory >= 0 && selectInventory < inventory.Count) {
+            // inventory 배열의 해당 인덱스가 null이 아닌지 확인합니다.
+            inventoryInfo.text = inventory[selectInventory].name +"\n"
+                + "판매가격 : " + inventory[selectInventory].price/2;
+
+            
+        } else {
+            inventoryInfo.text = "";
+        }       
+        
+    }
+
+
+    // 인벤토리 인덱스 전달
+    public void SlotNum(){
+        int s = slotNumber;
+        obj = GameObject.Find("BuyButton");
+        obj.GetComponent<WeaponManager>().slotNumber = s;
+    }
+        
+    
 
    
    

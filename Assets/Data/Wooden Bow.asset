@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Wooden Bow
   m_EditorClassIdentifier: 
   id: 7
+  category: 2
   name: "\uBAA9\uC7AC \uD65C"
   price: 1000
   damage: 3

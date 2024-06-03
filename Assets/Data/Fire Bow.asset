@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fire Bow
   m_EditorClassIdentifier: 
   id: 8
+  category: 2
   name: "\uBD88 \uD65C"
   price: 1500
   damage: 5

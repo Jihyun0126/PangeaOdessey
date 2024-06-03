@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Water Bow
   m_EditorClassIdentifier: 
   id: 9
+  category: 2
   name: "\uBB3C \uD65C"
   price: 3000
   damage: 7

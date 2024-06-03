@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fireball Staff
   m_EditorClassIdentifier: 
   id: 10
+  category: 5
   name: "\uD654\uC5FC\uAD6C \uC9C0\uD321\uC774"
   price: 3000
   damage: 10

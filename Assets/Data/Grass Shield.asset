@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grass Shield
   m_EditorClassIdentifier: 
   id: 2
+  category: 1
   name: "\uD480 \uBC29\uD328"
   price: 1500
   damage: 3

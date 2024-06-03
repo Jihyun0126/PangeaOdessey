@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Wooden Axe
   m_EditorClassIdentifier: 
   id: 4
+  category: 3
   name: "\uB098\uBB34 \uB3C4\uB07C"
   price: 1000
   damage: 5

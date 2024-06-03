@@ -830,6 +830,8 @@ GameObject:
   - component: {fileID: 404576341}
   - component: {fileID: 404576343}
   - component: {fileID: 404576342}
+  - component: {fileID: 404576344}
+  - component: {fileID: 404576345}
   m_Layer: 5
   m_Name: inven (3)
   m_TagString: Untagged
@@ -895,6 +897,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404576340}
   m_CullTransparentMesh: 1
+--- !u!114 &404576344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404576340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8eca8f7860d3e4fa33c80f0a1e5bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatas:
+  - {fileID: 11400000, guid: e4a977c0f183eb74b82a9876460b21ca, type: 2}
+  - {fileID: 11400000, guid: 3ebee2d9a859b5948b3222371be7fa53, type: 2}
+  - {fileID: 11400000, guid: 2d0ad14c86f53134384c0fee51943635, type: 2}
+  - {fileID: 11400000, guid: 9956b46e88ffc3f42ab55bc341223cec, type: 2}
+  - {fileID: 11400000, guid: 53d9e7b472badb343b89cf1d12a18f91, type: 2}
+  - {fileID: 11400000, guid: 4458255849ef86145b4b4421018698df, type: 2}
+  - {fileID: 11400000, guid: d339dc73a1bac5a499c0a4c164880add, type: 2}
+  - {fileID: 11400000, guid: db23449ee1412fe4aaee3d4d5d151bc3, type: 2}
+  - {fileID: 11400000, guid: 004f0e06e171c2c4f848363c8d8c86ac, type: 2}
+  - {fileID: 11400000, guid: 91bcfbb124596984e8032fa9a05dde1b, type: 2}
+  - {fileID: 11400000, guid: 0c0f54230cb940442925e3a8b4fe779a, type: 2}
+  weaponId: 0
+  itemSlots:
+  - {fileID: 131220393}
+  - {fileID: 1182390386}
+  - {fileID: 1967706027}
+  - {fileID: 327319224}
+  - {fileID: 484322500}
+  weaponObjects:
+  - {fileID: 1490217447}
+  - {fileID: 1556969525}
+  - {fileID: 2025095798}
+  - {fileID: 889216978}
+  - {fileID: 177324378}
+  - {fileID: 1390329981}
+  - {fileID: 224924198}
+  - {fileID: 887187947}
+  - {fileID: 2029263968}
+  - {fileID: 998326881}
+  - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 3
+--- !u!114 &404576345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404576340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 404576342}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 404576344}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SlotNum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474663598}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SetInventoryInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &412408097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1508,8 @@ MonoBehaviour:
   - {fileID: 2029263968}
   - {fileID: 998326881}
   - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 0
 --- !u!1 &484322498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2361,7 @@ RectTransform:
   - {fileID: 404576341}
   - {fileID: 2014936453}
   - {fileID: 1001173493}
+  - {fileID: 826711944}
   m_Father: {fileID: 1756320012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2726,6 +2844,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778965491}
   m_CullTransparentMesh: 1
+--- !u!1 &826711943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826711944}
+  - component: {fileID: 826711946}
+  - component: {fileID: 826711945}
+  m_Layer: 5
+  m_Name: InventoryInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &826711944
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826711943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 690612399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -42.43, y: -70.3344}
+  m_SizeDelta: {x: 195.44, y: 66.6688}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &826711945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826711943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 202bf5a3416bb1141aa409e2c616cf00, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &826711946
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826711943}
+  m_CullTransparentMesh: 1
 --- !u!1 &841429541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2934,8 @@ GameObject:
   - component: {fileID: 841429542}
   - component: {fileID: 841429544}
   - component: {fileID: 841429543}
+  - component: {fileID: 841429546}
+  - component: {fileID: 841429545}
   m_Layer: 5
   m_Name: inven
   m_TagString: Untagged
@@ -2803,6 +3002,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841429541}
   m_CullTransparentMesh: 1
+--- !u!114 &841429545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841429541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8eca8f7860d3e4fa33c80f0a1e5bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatas:
+  - {fileID: 11400000, guid: e4a977c0f183eb74b82a9876460b21ca, type: 2}
+  - {fileID: 11400000, guid: 3ebee2d9a859b5948b3222371be7fa53, type: 2}
+  - {fileID: 11400000, guid: 2d0ad14c86f53134384c0fee51943635, type: 2}
+  - {fileID: 11400000, guid: 9956b46e88ffc3f42ab55bc341223cec, type: 2}
+  - {fileID: 11400000, guid: 53d9e7b472badb343b89cf1d12a18f91, type: 2}
+  - {fileID: 11400000, guid: 4458255849ef86145b4b4421018698df, type: 2}
+  - {fileID: 11400000, guid: d339dc73a1bac5a499c0a4c164880add, type: 2}
+  - {fileID: 11400000, guid: db23449ee1412fe4aaee3d4d5d151bc3, type: 2}
+  - {fileID: 11400000, guid: 004f0e06e171c2c4f848363c8d8c86ac, type: 2}
+  - {fileID: 11400000, guid: 91bcfbb124596984e8032fa9a05dde1b, type: 2}
+  - {fileID: 11400000, guid: 0c0f54230cb940442925e3a8b4fe779a, type: 2}
+  weaponId: 0
+  itemSlots:
+  - {fileID: 131220393}
+  - {fileID: 1182390386}
+  - {fileID: 1967706027}
+  - {fileID: 327319224}
+  - {fileID: 484322500}
+  weaponObjects:
+  - {fileID: 1490217447}
+  - {fileID: 1556969525}
+  - {fileID: 2025095798}
+  - {fileID: 889216978}
+  - {fileID: 177324378}
+  - {fileID: 1390329981}
+  - {fileID: 224924198}
+  - {fileID: 887187947}
+  - {fileID: 2029263968}
+  - {fileID: 998326881}
+  - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 0
+--- !u!114 &841429546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841429541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 841429543}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 841429545}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SlotNum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474663598}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SetInventoryInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &865366809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3004,6 +3316,8 @@ GameObject:
   - component: {fileID: 886368020}
   - component: {fileID: 886368022}
   - component: {fileID: 886368021}
+  - component: {fileID: 886368023}
+  - component: {fileID: 886368024}
   m_Layer: 5
   m_Name: inven2
   m_TagString: Untagged
@@ -3069,6 +3383,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886368019}
   m_CullTransparentMesh: 1
+--- !u!114 &886368023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886368019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8eca8f7860d3e4fa33c80f0a1e5bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatas:
+  - {fileID: 11400000, guid: e4a977c0f183eb74b82a9876460b21ca, type: 2}
+  - {fileID: 11400000, guid: 3ebee2d9a859b5948b3222371be7fa53, type: 2}
+  - {fileID: 11400000, guid: 2d0ad14c86f53134384c0fee51943635, type: 2}
+  - {fileID: 11400000, guid: 9956b46e88ffc3f42ab55bc341223cec, type: 2}
+  - {fileID: 11400000, guid: 53d9e7b472badb343b89cf1d12a18f91, type: 2}
+  - {fileID: 11400000, guid: 4458255849ef86145b4b4421018698df, type: 2}
+  - {fileID: 11400000, guid: d339dc73a1bac5a499c0a4c164880add, type: 2}
+  - {fileID: 11400000, guid: db23449ee1412fe4aaee3d4d5d151bc3, type: 2}
+  - {fileID: 11400000, guid: 004f0e06e171c2c4f848363c8d8c86ac, type: 2}
+  - {fileID: 11400000, guid: 91bcfbb124596984e8032fa9a05dde1b, type: 2}
+  - {fileID: 11400000, guid: 0c0f54230cb940442925e3a8b4fe779a, type: 2}
+  weaponId: 0
+  itemSlots:
+  - {fileID: 131220393}
+  - {fileID: 1182390386}
+  - {fileID: 1967706027}
+  - {fileID: 327319224}
+  - {fileID: 484322500}
+  weaponObjects:
+  - {fileID: 1490217447}
+  - {fileID: 1556969525}
+  - {fileID: 2025095798}
+  - {fileID: 889216978}
+  - {fileID: 177324378}
+  - {fileID: 1390329981}
+  - {fileID: 224924198}
+  - {fileID: 887187947}
+  - {fileID: 2029263968}
+  - {fileID: 998326881}
+  - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 1
+--- !u!114 &886368024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886368019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 886368021}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 886368023}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SlotNum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474663598}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SetInventoryInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &887187947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8632908246836056939, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
@@ -3286,6 +3713,8 @@ MonoBehaviour:
   - {fileID: 2029263968}
   - {fileID: 998326881}
   - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 0
 --- !u!114 &1001173497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4147,6 +4576,8 @@ GameObject:
   - component: {fileID: 1183738330}
   - component: {fileID: 1183738332}
   - component: {fileID: 1183738331}
+  - component: {fileID: 1183738333}
+  - component: {fileID: 1183738334}
   m_Layer: 5
   m_Name: inven (2)
   m_TagString: Untagged
@@ -4212,6 +4643,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183738329}
   m_CullTransparentMesh: 1
+--- !u!114 &1183738333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183738329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8eca8f7860d3e4fa33c80f0a1e5bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatas:
+  - {fileID: 11400000, guid: e4a977c0f183eb74b82a9876460b21ca, type: 2}
+  - {fileID: 11400000, guid: 3ebee2d9a859b5948b3222371be7fa53, type: 2}
+  - {fileID: 11400000, guid: 2d0ad14c86f53134384c0fee51943635, type: 2}
+  - {fileID: 11400000, guid: 9956b46e88ffc3f42ab55bc341223cec, type: 2}
+  - {fileID: 11400000, guid: 53d9e7b472badb343b89cf1d12a18f91, type: 2}
+  - {fileID: 11400000, guid: 4458255849ef86145b4b4421018698df, type: 2}
+  - {fileID: 11400000, guid: d339dc73a1bac5a499c0a4c164880add, type: 2}
+  - {fileID: 11400000, guid: db23449ee1412fe4aaee3d4d5d151bc3, type: 2}
+  - {fileID: 11400000, guid: 004f0e06e171c2c4f848363c8d8c86ac, type: 2}
+  - {fileID: 11400000, guid: 91bcfbb124596984e8032fa9a05dde1b, type: 2}
+  - {fileID: 11400000, guid: 0c0f54230cb940442925e3a8b4fe779a, type: 2}
+  weaponId: 0
+  itemSlots:
+  - {fileID: 131220393}
+  - {fileID: 1182390386}
+  - {fileID: 1967706027}
+  - {fileID: 327319224}
+  - {fileID: 484322500}
+  weaponObjects:
+  - {fileID: 1490217447}
+  - {fileID: 1556969525}
+  - {fileID: 2025095798}
+  - {fileID: 889216978}
+  - {fileID: 177324378}
+  - {fileID: 1390329981}
+  - {fileID: 224924198}
+  - {fileID: 887187947}
+  - {fileID: 2029263968}
+  - {fileID: 998326881}
+  - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 2
+--- !u!114 &1183738334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183738329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1183738331}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1183738333}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SlotNum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474663598}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SetInventoryInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1208970453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +5232,8 @@ MonoBehaviour:
   weaponId: 1
   itemSlots: []
   weaponObjects: []
+  inventoryInfo: {fileID: 0}
+  slotNumber: 0
 --- !u!1 &1309332984
 GameObject:
   m_ObjectHideFlags: 0
@@ -6896,6 +7442,8 @@ GameObject:
   - component: {fileID: 2014936453}
   - component: {fileID: 2014936455}
   - component: {fileID: 2014936454}
+  - component: {fileID: 2014936456}
+  - component: {fileID: 2014936457}
   m_Layer: 5
   m_Name: inven (4)
   m_TagString: Untagged
@@ -6961,6 +7509,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014936452}
   m_CullTransparentMesh: 1
+--- !u!114 &2014936456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014936452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8eca8f7860d3e4fa33c80f0a1e5bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatas:
+  - {fileID: 11400000, guid: e4a977c0f183eb74b82a9876460b21ca, type: 2}
+  - {fileID: 11400000, guid: 3ebee2d9a859b5948b3222371be7fa53, type: 2}
+  - {fileID: 11400000, guid: 2d0ad14c86f53134384c0fee51943635, type: 2}
+  - {fileID: 11400000, guid: 9956b46e88ffc3f42ab55bc341223cec, type: 2}
+  - {fileID: 11400000, guid: 53d9e7b472badb343b89cf1d12a18f91, type: 2}
+  - {fileID: 11400000, guid: 4458255849ef86145b4b4421018698df, type: 2}
+  - {fileID: 11400000, guid: d339dc73a1bac5a499c0a4c164880add, type: 2}
+  - {fileID: 11400000, guid: db23449ee1412fe4aaee3d4d5d151bc3, type: 2}
+  - {fileID: 11400000, guid: 004f0e06e171c2c4f848363c8d8c86ac, type: 2}
+  - {fileID: 11400000, guid: 91bcfbb124596984e8032fa9a05dde1b, type: 2}
+  - {fileID: 11400000, guid: 0c0f54230cb940442925e3a8b4fe779a, type: 2}
+  weaponId: 0
+  itemSlots:
+  - {fileID: 131220393}
+  - {fileID: 1182390386}
+  - {fileID: 1967706027}
+  - {fileID: 327319224}
+  - {fileID: 484322500}
+  weaponObjects:
+  - {fileID: 1490217447}
+  - {fileID: 1556969525}
+  - {fileID: 2025095798}
+  - {fileID: 889216978}
+  - {fileID: 177324378}
+  - {fileID: 1390329981}
+  - {fileID: 224924198}
+  - {fileID: 887187947}
+  - {fileID: 2029263968}
+  - {fileID: 998326881}
+  - {fileID: 99179940}
+  inventoryInfo: {fileID: 826711945}
+  slotNumber: 4
+--- !u!114 &2014936457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014936452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2014936454}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2014936456}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SlotNum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474663598}
+        m_TargetAssemblyTypeName: WeaponManager, Assembly-CSharp
+        m_MethodName: SetInventoryInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2025095798 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5527768690321467696, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}

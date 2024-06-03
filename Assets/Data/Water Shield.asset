@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Water Shield
   m_EditorClassIdentifier: 
   id: 3
+  category: 1
   name: "\uBB3C \uBC29\uD328"
   price: 3000
   damage: 5

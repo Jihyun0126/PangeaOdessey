@@ -3,6 +3,13 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public int id;
+    /* category
+        방패 1
+        활 2
+        도끼 3
+        장막 4
+        지팡이 5  */
+    public int category;
     public new string name;
     public int price;
     public int damage;

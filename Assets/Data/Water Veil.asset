@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Water Veil
   m_EditorClassIdentifier: 
   id: 11
+  category: 4
   name: "\uBB3C\uC758 \uC7A5\uB9C9"
   price: 3000
   damage: 10

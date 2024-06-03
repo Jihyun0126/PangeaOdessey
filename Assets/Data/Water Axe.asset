@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Water Axe
   m_EditorClassIdentifier: 
   id: 5
+  category: 3
   name: "\uBB3C \uB3C4\uB07C"
   price: 1500
   damage: 15

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grass Axe
   m_EditorClassIdentifier: 
   id: 6
+  category: 3
   name: "\uD480 \uB3C4\uB07C"
   price: 3000
   damage: 20

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: WoodenShield
   m_EditorClassIdentifier: 
   id: 1
+  category: 1
   name: "\uB098\uBB34 \uBC29\uD328"
   price: 1000
   damage: 1
