@@ -22,8 +22,7 @@ public class Explosion : MonoBehaviour
         Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(transform.position, 3f);
         foreach(Collider2D collider2D in collider2Ds)
         {
-            if (collider2D.tag != "ball") { 
-                Debug.Log(collider2D.tag);
+            if (collider2D.tag != "ball") {
             }
         }
         this.gameObject.SetActive(false);
