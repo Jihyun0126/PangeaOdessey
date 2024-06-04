@@ -26,6 +26,7 @@ public class BossControls : MonoBehaviour
     private Rigidbody2D rigid;
     private Rigidbody2D player;
     private Vector2 lastPlayerPosition;
+    private Collider2D attackRange; // 공격 범위를 나타내는 Collider
 
     void Awake()
     {
@@ -33,6 +34,12 @@ public class BossControls : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        attackRange = GetComponentInChildren<BoxCollider2D>(); // 공격 범위로 사용할 Collider
+
+        if (attackRange == null)
+        {
+            Debug.LogError("Attack range collider not found! Please add a child game object with a BoxCollider2D.");
+        }
     }
 
     void FixedUpdate()
@@ -46,7 +53,6 @@ public class BossControls : MonoBehaviour
             // 공격 애니메이션 트리거
             animator.SetTrigger("Attack");
             lastAttackTime = Time.time;
-            GameManager.instance.TakeDamage(attackDamage);
         }
         else if (distanceToPlayer < followDistance)
         {
@@ -136,4 +142,20 @@ public class BossControls : MonoBehaviour
             GameManager.instance.TakeDamage(collisionDamage);
         }
     }
+
+    // 공격 범위 내 플레이어에게 데미지를 입히는 함수
+    public void ApplyAttackDamage()
+    {
+        if (attackRange == null) return; // attackRange가 null인 경우 함수 종료
+
+        Collider2D[] hits = Physics2D.OverlapBoxAll(attackRange.bounds.center, attackRange.bounds.size, 0, playerLayer);
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                GameManager.instance.TakeDamage(attackDamage);
+            }
+        }
+    }
 }
+    

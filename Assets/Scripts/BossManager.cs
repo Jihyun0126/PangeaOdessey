@@ -59,10 +59,6 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        // 공격 버튼을 눌렀을 때 보스에게 데미지를 입히는 함수 호출
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            bossManager.TakeDamage(10); // 예시: 10의 데미지를 입힘
-        }
+      
     }
 }
