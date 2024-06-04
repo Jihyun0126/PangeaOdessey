@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
-{
+{   public static Spawner spawn;
     public Transform[] spawnPoint;
     public SpawnData[] spawnData;
     float timer;
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
         //자기 자신의 우변을 더함
         timer += Time.deltaTime;
         //시간에 맞춰 레벨을 올림
-        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 240f),spawnData.Length - 1); //0레벨 
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f),spawnData.Length - 1); //0레벨 
         //Debug.Log(level);
         if(timer > spawnData[level].spawnTime)
         {
@@ -42,4 +42,5 @@ public class SpawnData
     public float spawnTime;
     public int health;
     public float speed;
+    public AudioSource audio;
 }

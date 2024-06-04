@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
     public GameObject itemPrefab;
     SpriteRenderer sr;
     public float speed;
@@ -14,13 +15,17 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public LayerMask playerLayer;
     public float detectionRadius = 5f;
-
+    
+    GameObject aud;
     bool isLive;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
     Collider2D coll;
-
+    void Start()
+    {
+        aud = GameObject.Find("Spawner");
+    }
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -30,7 +35,6 @@ public class Enemy : MonoBehaviour
         coll = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
     }
-
     void FixedUpdate()
     {
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
@@ -41,7 +45,6 @@ public class Enemy : MonoBehaviour
         rigid.velocity = Vector2.zero;
         DetectPlayerAndAttack();
     }
-
     void DetectPlayerAndAttack()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, detectionRadius, playerLayer);
@@ -53,13 +56,11 @@ public class Enemy : MonoBehaviour
             }
         }
     }
-
     void LateUpdate()
     {
         if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit")) return;
         spriter.flipX = target.position.x < rigid.position.x;
     }
-
     void OnEnable()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
@@ -70,7 +71,6 @@ public class Enemy : MonoBehaviour
         anim.SetBool("Death", false);
         health = maxHealth;
     }
-
     public void Init(SpawnData data)
     {
         anim.runtimeAnimatorController = animCon[data.spriteType];
@@ -78,11 +78,13 @@ public class Enemy : MonoBehaviour
         maxHealth = data.health;
         health = data.health;
     }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Bullet")) return;
-
+        if (collision.CompareTag("Player"))
+        {
+            GameManager.instance.health -= 10f;
+        }
         health -= collision.GetComponent<Bullet>().damage;
         StartCoroutine(KnockBack());
         StartCoroutine(Alphablink());
@@ -100,7 +102,6 @@ public class Enemy : MonoBehaviour
             DropItem();
         }
     }
-
     IEnumerator KnockBack()
     {
         yield return wait;
@@ -108,7 +109,6 @@ public class Enemy : MonoBehaviour
         Vector3 dirVec = transform.position - playerPos;
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
-
     IEnumerator Alphablink()
     {
         yield return new WaitForSeconds(0.1f);
@@ -116,13 +116,10 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         sr.color = new Color(1, 1, 1, 1);
     }
-
     void DropItem()
     {
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
-        Debug.Log("코인 드랍");
     }
-
     void Dead()
     {
         gameObject.SetActive(false);

@@ -21,8 +21,6 @@ public class Player : MonoBehaviour
         scanner = GetComponent<Scanner>();
         curTime = 0;
     }
-
-
     // Update is called once per frame
     void Update()
     {
@@ -53,6 +51,26 @@ public class Player : MonoBehaviour
         if (inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
+        }
+    }
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.instance.health -= Time.deltaTime * 10;
+        }
+        if (!GameManager.instance.isLive) return;
+    }
+    public void TakeDamage(float amount)
+    {
+        GameManager.instance.health -= amount;
+        if (GameManager.instance.health < 0) GameManager.instance.health = 0;
+        Debug.Log("Health after damage: " + GameManager.instance.health);
+
+        // 필요 시 플레이어가 죽었을 때 로직 추가
+        if (GameManager.instance.health <= 0)
+        {
+            anim.SetTrigger("Dead");
         }
     }
 }

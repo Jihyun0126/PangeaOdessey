@@ -18,7 +18,7 @@ public class HUD : MonoBehaviour
 
         if (mySlider == null)
         {
-            Debug.LogError("Slider component not found!");
+            //Debug.LogError("Slider component not found!");
         }
     }
 
