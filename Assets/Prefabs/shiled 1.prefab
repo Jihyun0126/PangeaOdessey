@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 751625918349173180}
   - component: {fileID: 1211365421366136298}
   - component: {fileID: 4165928648102407311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shiled 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

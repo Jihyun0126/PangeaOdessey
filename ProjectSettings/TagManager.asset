@@ -11,6 +11,8 @@ TagManager:
   - Enemy2
   - ball
   - Aura
+  - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
+  - Enemy
   - 
   - 
   - 
