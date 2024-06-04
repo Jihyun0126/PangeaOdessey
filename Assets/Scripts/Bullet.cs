@@ -30,11 +30,15 @@ public class Bullet : MonoBehaviour
         {
             rigid.velocity = dir * 15f;
         }
+        if(per == -3)
+        {
+            rigid.velocity = dir * 5f;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Enemy") || per == -1 || per == -2)
+        if (!collision.CompareTag("Enemy") || per == -1 || per == -2 || per == -3)
             return;
         per--;
 
@@ -44,6 +48,10 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
         }
         if (per == -2)
+        {
+            gameObject.SetActive(false);
+        }
+        if(per == -3)
         {
             gameObject.SetActive(false);
         }

@@ -56,5 +56,4 @@ public class Player : MonoBehaviour
             spriter.flipX = inputVec.x < 0;
         }
     }
-
 }

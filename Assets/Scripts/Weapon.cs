@@ -217,7 +217,7 @@ public class Weapon : MonoBehaviour
         dir = dir.normalized;
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.position = transform.position;
-        bullet.GetComponent<Explosion>().Init(damage, dir);
+        bullet.GetComponent<Bullet>().Init(damage, -3, dir);
     }
     void Waterball()
     {
