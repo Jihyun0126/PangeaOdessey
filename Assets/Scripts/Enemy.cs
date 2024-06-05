@@ -15,17 +15,14 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public LayerMask playerLayer;
     public float detectionRadius = 5f;
-    
-    GameObject aud;
+    public AudioSource audioSource; // AudioSource 컴포넌트 추가
+
     bool isLive;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
     Collider2D coll;
-    void Start()
-    {
-        aud = GameObject.Find("Spawner");
-    }
+    AudioClip deathAudioClip; // 죽을 때 재생할 AudioClip
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +31,7 @@ public class Enemy : MonoBehaviour
         wait = new WaitForFixedUpdate();
         coll = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>(); // AudioSource 컴포넌트 가져오기
     }
     void FixedUpdate()
     {
@@ -77,6 +75,7 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        deathAudioClip = data.audioClip; // 죽을 때 재생할 AudioClip 설정
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -100,6 +99,20 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Death", true);
             DropItem();
+            Debug.Log(audioSource);
+            PlayDeathAudio(); // 죽을 때 오디오 재생
+        }
+    }
+    void PlayDeathAudio()
+    {
+        if (deathAudioClip != null)
+        {
+            audioSource.clip = deathAudioClip;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("deathAudioClip is null, cannot play death audio.");
         }
     }
     IEnumerator KnockBack()
@@ -119,6 +132,7 @@ public class Enemy : MonoBehaviour
     void DropItem()
     {
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
+        Debug.Log("코인 드랍");
     }
     void Dead()
     {

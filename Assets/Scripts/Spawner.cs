@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
         timer += Time.deltaTime;
         //시간에 맞춰 레벨을 올림
         level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f),spawnData.Length - 1); //0레벨 
-        //Debug.Log(level);
         if(timer > spawnData[level].spawnTime)
         {
             Spawn();
@@ -30,6 +29,7 @@ public class Spawner : MonoBehaviour
     {
         GameObject enemy = GameManager.instance.pool.Get(0);
         //자기 자신을 빼기 위해 0부터가 아닌 1부터
+        Debug.Log("Enemy Spawned: " + enemy.name); // Debug Log 추가
         enemy.transform.position = spawnPoint[Random.Range(1,spawnPoint.Length)].position;
         enemy.GetComponent<Enemy>().Init(spawnData[level]);
     }
@@ -42,5 +42,5 @@ public class SpawnData
     public float spawnTime;
     public int health;
     public float speed;
-    public AudioSource audio;
+    public AudioClip audioClip; // AudioClip 필드 추가
 }
