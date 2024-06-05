@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +6,9 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     public float speed;
-    public Transform pos;
-    public Vector2 boxSize;
     public float curTime;
     public float coolTime;
+    public Scanner scanner;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -20,10 +18,9 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        scanner = GetComponent<Scanner>();
         curTime = 0;
     }
-
-
     // Update is called once per frame
     void Update()
     {
@@ -31,18 +28,13 @@ public class Player : MonoBehaviour
         inputVec.y = Input.GetAxisRaw("Vertical");
         if (curTime <= 0)
         {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
-            foreach (Collider2D collider in collider2Ds)
-            {
-                //Debug.Log(collider.tag);
-            }
             anim.SetTrigger("atk");
-            curTime = coolTime; // ï¿½ï¿½Ù¿ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            curTime = coolTime; 
 
         }
         else
         {
-            curTime -= Time.deltaTime; // ï¿½ï¿½Ù¿ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
+            curTime -= Time.deltaTime; 
         }
     }
 
@@ -56,18 +48,29 @@ public class Player : MonoBehaviour
     {
         anim.SetFloat("Speed", inputVec.magnitude);
 
-        if (inputVec.x != 0) // inputVec.x ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ Å« ï¿½ï¿½ï¿½
+        if (inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
         }
     }
-
-    void OnDrawGizmos() // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    void OnCollisionStay2D(Collision2D collision)
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(pos.position, boxSize);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            GameManager.instance.health -= Time.deltaTime * 10;
+        }
+        if (!GameManager.instance.isLive) return;
     }
+    public void TakeDamage(float amount)
+    {
+        GameManager.instance.health -= amount;
+        if (GameManager.instance.health < 0) GameManager.instance.health = 0;
+        Debug.Log("Health after damage: " + GameManager.instance.health);
 
-    
-
+        // ÇÊ¿ä ½Ã ÇÃ·¹ÀÌ¾î°¡ Á×¾úÀ» ¶§ ·ÎÁ÷ Ãß°¡
+        if (GameManager.instance.health <= 0)
+        {
+            anim.SetTrigger("Dead");
+        }
+    }
 }
