@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnBoss()
     {
-        Vector2 spawnPosition = (Vector2)player.transform.position + Random.insideUnitCircle * spawnRadius;
+        Vector2 spawnPosition = (Vector2)player.transform.position + UnityEngine.Random.insideUnitCircle * spawnRadius;
         GameObject boss = Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
         
         // 보스 체력 설정
