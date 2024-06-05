@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +20,8 @@ public class GameManager : MonoBehaviour
     [Header(" Game Object")]
     public PoolManager pool;
     public Player player;
+    public Text gold;
+    public Text timer;
 
     [Header("# Boss Info")]
     public GameObject bossPrefab; //보스 프리팹
@@ -55,7 +60,14 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             // 게임 오버 로직을 여기에 추가합니다.
+            TimeSpan timeSpan = TimeSpan.FromSeconds(gameTime);
+            string timeString = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
+            timer.text = timeString;
+            if (gameTime > maxGameTime) {
+            
+            }
         }
+        gold.text = bitCoin.ToString()+ "G";
     }
 
     void SpawnBoss()
