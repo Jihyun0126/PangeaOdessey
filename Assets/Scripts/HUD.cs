@@ -14,16 +14,13 @@ public class HUD : MonoBehaviour
     void Awake()
     { 
         myText = GetComponent<Text>();
-<<<<<<< HEAD
-      
-=======
         mySlider = GetComponent<Slider>();
 
         if (mySlider == null)
         {
             //Debug.LogError("Slider component not found!");
         }
->>>>>>> feature_SSH
+
     }
 
     void LateUpdate()
