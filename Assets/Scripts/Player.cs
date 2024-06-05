@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         if (GameManager.instance.health < 0) GameManager.instance.health = 0;
         Debug.Log("Health after damage: " + GameManager.instance.health);
 
-        // ÇÊ¿ä ½Ã ÇÃ·¹ÀÌ¾î°¡ Á×¾úÀ» ¶§ ·ÎÁ÷ Ãß°¡
+        // ï¿½Ê¿ï¿½ ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½×¾ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
         if (GameManager.instance.health <= 0)
         {
             anim.SetTrigger("Dead");
