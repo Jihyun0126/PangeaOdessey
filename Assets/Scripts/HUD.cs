@@ -14,12 +14,7 @@ public class HUD : MonoBehaviour
     void Awake()
     { 
         myText = GetComponent<Text>();
-        mySlider = GetComponent<Slider>();
-
-        if (mySlider == null)
-        {
-            Debug.LogError("Slider component not found!");
-        }
+      
     }
 
     void LateUpdate()
