@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public GameObject itemPrefab;
     SpriteRenderer sr;
     public float speed;
+    public float originalspeed;
     public float health;
     public float maxHealth;
     public RuntimeAnimatorController[] animCon;
@@ -21,6 +22,11 @@ public class Enemy : MonoBehaviour
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
     Collider2D coll;
+
+    void Start()
+    {
+        originalspeed = speed;
+    }
 
     void Awake()
     {
