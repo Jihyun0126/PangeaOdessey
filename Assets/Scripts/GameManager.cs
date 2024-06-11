@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             SpawnBoss();
         }
 
-        if (gameTime > maxGameTime)
+        if (gameTime < maxGameTime)
         {
             // 게임 오버 로직을 여기에 추가합니다.
             TimeSpan timeSpan = TimeSpan.FromSeconds(gameTime);

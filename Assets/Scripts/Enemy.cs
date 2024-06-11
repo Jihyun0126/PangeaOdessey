@@ -106,7 +106,6 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Death", true);
             DropItem();
-            Debug.Log(audioSource);
             PlayDeathAudio(); // ���� �� ����� ���
         }
     }
@@ -139,7 +138,6 @@ public class Enemy : MonoBehaviour
     void DropItem()
     {
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
-        Debug.Log("���� ���");
     }
     void Dead()
     {
