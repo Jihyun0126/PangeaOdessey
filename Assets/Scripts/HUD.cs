@@ -51,7 +51,6 @@ public class HUD : MonoBehaviour
                 break;
         }
     }
-
     void UpdateHealthUI()
     {
         float curHealth = GameManager.instance.health;
@@ -59,7 +58,6 @@ public class HUD : MonoBehaviour
         mySlider.value = curHealth / maxHealth;
         Debug.Log("Slider value: " + mySlider.value);
     }
-
     void UpdateBossHPUI()
     {
     float curBossHealth = GameManager.instance.bossHealth;

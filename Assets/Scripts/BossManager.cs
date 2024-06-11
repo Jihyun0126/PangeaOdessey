@@ -51,3 +51,14 @@ public class BossManager : MonoBehaviour
         // HP Bar 비활성화
     }
 }
+
+// PlayerAttack.cs (플레이어 공격 시 호출될 함수)
+public class PlayerAttack : MonoBehaviour
+{
+    public BossManager bossManager;
+
+    void Update()
+    {
+      
+    }
+}
