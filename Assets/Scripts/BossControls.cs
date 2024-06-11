@@ -119,7 +119,7 @@ public class BossControls : MonoBehaviour
         if (!isLive) return;
 
         health -= amount;
-        GameManager.instance.UpdateBossHealth(health);
+        //GameManager.instance.UpdateBossHealth(health);
 
         if (health <= 0)
         {
