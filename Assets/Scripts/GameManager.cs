@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [Header("# Game Control")]
-    public bool isLive;
     public float gameTime;
     public float maxGameTime = 2 * 10f;
     [Header("# Player info")]
@@ -24,8 +23,8 @@ public class GameManager : MonoBehaviour
     public Text timer;
     
     [Header("# Boss Info")]
-    public GameObject bossPrefab; //보스 프리팹
-    public GameObject bossHUD; //보스 HP UI
+    public GameObject bossPrefab; // 보스 프리팹
+    public GameObject bossHUD; // 보스 HP UI
     public float spawnRadius = 5f; // 플레이어 주위 스폰 반경
     private bool bossSpawned = false; // 보스가 한 번만 스폰되도록 설정
 
