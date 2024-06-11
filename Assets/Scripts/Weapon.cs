@@ -223,6 +223,6 @@ public class Weapon : MonoBehaviour
     {
         Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
         bullet.parent = transform;
-        bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);
+        bullet.GetComponent<Aura>().Init(damage);
     }
 }
