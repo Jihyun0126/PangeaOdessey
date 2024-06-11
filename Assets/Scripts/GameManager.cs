@@ -32,7 +32,9 @@ public class GameManager : MonoBehaviour
     [Header("# Boss Health")]
     public float bossHealth;
     public float maxBossHealth;
-    
+
+    [Header("# Boss Damage")]
+    public float bossDamageAmount = 10f;    
     void Awake()
     {
         instance = this;
@@ -100,11 +102,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
+      public void TakeBossDamage(float amount)
+    {
+        bossHealth -= amount;
+        // 보스 HP Bar 감소 및 업데이트
+
+        if (bossHealth < 0) bossHealth = 0;
+        Debug.Log("Boss Health after damage: " + bossHealth);
+
+
+        if (bossHealth <= 0)
+        {
+            BossDead();
+        }
+    }
+       void BossDead()
+    {
+        // 보스가 죽었을 때 처리할 로직을 여기에 추가합니다.
+        // 예: 보스 사망 애니메이션 재생, 보스 관련 사운드 재생 등
+        bossSpawned = false;
+        gameTime = 0f; // 보스가 죽으면 게임 시간 초기화
+        if (bossHUD != null)
+        {
+            bossHUD.SetActive(false); // 보스 사망 시 HP UI 비활성화
+        }
+    }
+
     void PlayerDead()
     {
         // 플레이어가 죽었을 때 처리할 로직을 여기에 추가합니다.
-        //Debug.Log("Player is Dead. Game Over.");
-        // 예: 게임 오버 화면 활성화, 게임 오버 사운드 재생 등
+        // 
     }
     
     public void UpdateBossHealth(float amount)
