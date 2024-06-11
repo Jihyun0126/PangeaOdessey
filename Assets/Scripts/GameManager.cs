@@ -5,12 +5,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [Header("# Game Control")]
     public float gameTime;
-    public float maxGameTime = 2 * 10f;
-    [Header("# Player info")]
-    public static int bitCoin = 0;
-    public float health = 100f; // int -> float
-    public float maxHealth = 100f; // int -> float
+    public float maxGameTime = 2 * 10f; // 게임 최대 시간
     public float bossSpawnTime = 20f; // 보스 스폰 시간
+
+    [Header("# Player Info")]
+    public float health = 100f;
+    public float maxHealth = 100f;
     public int kill;
 
     [Header(" Game Object")]
@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        bitCoin = 0;
         if (bossHUD != null)
         {
             bossHUD.SetActive(false); // 게임 시작 시 보스 HP UI 비활성화
