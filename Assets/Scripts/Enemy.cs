@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public GameObject itemPrefab;
     SpriteRenderer sr;
     public float speed;
+    public float originalspeed;
     public float health;
     public float maxHealth;
     public RuntimeAnimatorController[] animCon;
@@ -15,14 +16,20 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public LayerMask playerLayer;
     public float detectionRadius = 5f;
-    public AudioSource audioSource; // AudioSource ÄÄÆ÷³ÍÆ® Ãß°¡
+    public AudioSource audioSource; // AudioSource ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ß°ï¿½
 
     bool isLive;
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     WaitForFixedUpdate wait;
     Collider2D coll;
-    AudioClip deathAudioClip; // Á×À» ¶§ Àç»ýÇÒ AudioClip
+    AudioClip deathAudioClip; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ AudioClip
+
+    void Start()
+    {
+        originalspeed = speed;
+    }
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -31,7 +38,7 @@ public class Enemy : MonoBehaviour
         wait = new WaitForFixedUpdate();
         coll = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>(); // AudioSource ÄÄÆ÷³ÍÆ® °¡Á®¿À±â
+        audioSource = GetComponent<AudioSource>(); // AudioSource ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
     void FixedUpdate()
     {
@@ -75,7 +82,7 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
-        deathAudioClip = data.audioClip; // Á×À» ¶§ Àç»ýÇÒ AudioClip ¼³Á¤
+        deathAudioClip = data.audioClip; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ AudioClip ï¿½ï¿½ï¿½ï¿½
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -99,8 +106,7 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Death", true);
             DropItem();
-            Debug.Log(audioSource);
-            PlayDeathAudio(); // Á×À» ¶§ ¿Àµð¿À Àç»ý
+            PlayDeathAudio(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         }
     }
     void PlayDeathAudio()
@@ -132,7 +138,6 @@ public class Enemy : MonoBehaviour
     void DropItem()
     {
         Instantiate(itemPrefab, transform.position, Quaternion.identity);
-        Debug.Log("ÄÚÀÎ µå¶ø");
     }
     void Dead()
     {
