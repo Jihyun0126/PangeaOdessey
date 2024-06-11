@@ -179,11 +179,6 @@ MonoBehaviour:
   damageAmount: 2
   damageInterval: 2
   damageEffectPrefab: {fileID: 0}
---- !u!1 &350529162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1448624172349262898, guid: 111daec62658ab942ad30c4eec142faa, type: 3}
-  m_PrefabInstance: {fileID: 2381654183968945017}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &394540818
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +609,7 @@ PrefabInstance:
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHUD
       value: 
-      objectReference: {fileID: 350529162}
+      objectReference: {fileID: 0}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHealth
       value: 2
