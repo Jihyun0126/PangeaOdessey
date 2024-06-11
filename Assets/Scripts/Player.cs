@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +6,9 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     public float speed;
-    public Transform pos;
-    public Vector2 boxSize;
     public float curTime;
     public float coolTime;
+    public Scanner scanner;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -20,6 +18,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        scanner = GetComponent<Scanner>();
         curTime = 0;
     }
 
@@ -31,18 +30,13 @@ public class Player : MonoBehaviour
         inputVec.y = Input.GetAxisRaw("Vertical");
         if (curTime <= 0)
         {
-            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
-            foreach (Collider2D collider in collider2Ds)
-            {
-                //Debug.Log(collider.tag);
-            }
             anim.SetTrigger("atk");
-            curTime = coolTime; // ��ٿ��� �ٽ� ����
+            curTime = coolTime; 
 
         }
         else
         {
-            curTime -= Time.deltaTime; // ��ٿ� �ð� ����
+            curTime -= Time.deltaTime; 
         }
     }
 
@@ -56,18 +50,9 @@ public class Player : MonoBehaviour
     {
         anim.SetFloat("Speed", inputVec.magnitude);
 
-        if (inputVec.x != 0) // inputVec.x ���� 0���� ū ���
+        if (inputVec.x != 0)
         {
             spriter.flipX = inputVec.x < 0;
         }
     }
-
-    void OnDrawGizmos() // �������� ��������
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(pos.position, boxSize);
-    }
-
-    
-
 }
