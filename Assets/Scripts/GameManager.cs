@@ -7,10 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [Header("# Game Control")]
-    public bool isLive;
     public float gameTime;
     public float maxGameTime = 2 * 10f;
     [Header("# Player info")]
+    public bool isLive;
     public static int bitCoin = 0;
     public float health = 100f; // int -> float
     public float maxHealth = 100f; // int -> float
@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Text gold;
     public Text timer;
-
+    
     [Header("# Boss Info")]
-    public GameObject bossPrefab; //보스 프리팹
-    public GameObject bossHUD; //보스 HP UI
+    public GameObject bossPrefab; // 보스 프리팹
+    public GameObject bossHUD; // 보스 HP UI
     public float spawnRadius = 5f; // 플레이어 주위 스폰 반경
     private bool bossSpawned = false; // 보스가 한 번만 스폰되도록 설정
 
@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     public float bossHealth;
     public float maxBossHealth;
 
+    [Header("# Boss Damage")]
+    public float bossDamageAmount = 10f;
+    
     void Awake()
     {
         instance = this;
@@ -51,12 +54,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         gameTime += Time.deltaTime;
-
+        
         if (gameTime >= bossSpawnTime && !bossSpawned)
         {
             SpawnBoss();
         }
-
+        
         if (gameTime < maxGameTime)
         {
             // 게임 오버 로직을 여기에 추가합니다.
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
         }
         gold.text = bitCoin.ToString()+ "G";
     }
-
+    
     void SpawnBoss()
     {
         Vector2 spawnPosition = (Vector2)player.transform.position + UnityEngine.Random.insideUnitCircle * spawnRadius;
@@ -86,7 +89,7 @@ public class GameManager : MonoBehaviour
         }
         bossSpawned = true; // 보스를 한 번만 스폰되도록 설정
     }
-
+    
     public void TakeDamage(float amount)
     {
         health -= amount;
@@ -103,12 +106,26 @@ public class GameManager : MonoBehaviour
     void PlayerDead()
     {
         // 플레이어가 죽었을 때 처리할 로직을 여기에 추가합니다.
-        Debug.Log("Player is Dead. Game Over.");
+        //Debug.Log("Player is Dead. Game Over.");
         // 예: 게임 오버 화면 활성화, 게임 오버 사운드 재생 등
     }
-
-    public void UpdateBossHealth(float amount)
+    
+    public void TakeBossDamage(float amount)
     {
-        bossHealth = amount;
+        bossHealth -= amount;
+        if (bossHealth < 0) bossHealth = 0;
+        Debug.Log("Boss Health after damage: " + bossHealth);
+
+        // 필요 시 보스가 죽었을 때 로직 추가
+        if (bossHealth <= 0)
+        {
+            BossDead();
+        }
+    }
+
+    void BossDead()
+    {
+        // 보스가 죽었을 때 처리할 로직을 여기에 추가합니다.
+        // 예: 보스 사망 애니메이션 재생, 보스 관련 UI 비활성화 등
     }
 }

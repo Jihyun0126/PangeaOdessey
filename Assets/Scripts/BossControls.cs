@@ -119,13 +119,31 @@ public class BossControls : MonoBehaviour
         if (!isLive) return;
 
         health -= amount;
-        GameManager.instance.UpdateBossHealth(health);
+        //GameManager.instance.UpdateBossHealth(health);
 
         if (health <= 0)
         {
             Die();
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Player"))
+    {
+        // 플레이어와 충돌했을 때 처리 (플레이어에게 데미지를 주거나 특정 동작 수행 등)
+        GameManager.instance.TakeDamage(GameManager.instance.bossDamageAmount);
+    }
+    else if (collision.CompareTag("Bullet"))
+    {
+        // 보스에게 데미지를 주는 경우
+        Bullet bullet = collision.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            GameManager.instance.TakeBossDamage(bullet.damage);
+           
+        }
+    }
+}
 
     void Die()
     {
