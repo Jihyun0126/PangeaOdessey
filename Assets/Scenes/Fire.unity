@@ -572,17 +572,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 0
 --- !u!114 &166042517
@@ -962,17 +962,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 1
 --- !u!114 &237494847
@@ -1013,6 +1013,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237494843}
   m_CullTransparentMesh: 1
+--- !u!1 &277751470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277751472}
+  - component: {fileID: 277751471}
+  m_Layer: 0
+  m_Name: fireball
+  m_TagString: Bullet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &277751471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277751470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d456c770b0a3b04e8e89fa04487de50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  prefabId: 8
+  damage: 7
+  count: 5
+  speed: 0
+--- !u!4 &277751472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277751470}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1631871239}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321136216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,17 +1213,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 0
 --- !u!114 &324747295
@@ -2807,6 +2856,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592311772}
   m_CullTransparentMesh: 1
+--- !u!1 &624989931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624989932}
+  - component: {fileID: 624989933}
+  m_Layer: 0
+  m_Name: waterball
+  m_TagString: Bullet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &624989932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624989931}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1631871239}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624989933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624989931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d456c770b0a3b04e8e89fa04487de50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  prefabId: 8
+  damage: 7
+  count: 5
+  speed: 0
 --- !u!1 &628867314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,17 +4596,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 0
 --- !u!114 &1044422695
@@ -12784,17 +12882,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 3
 --- !u!114 &1269868164
@@ -12887,7 +12985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1379099934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13172,17 +13270,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 4
 --- !u!114 &1463102660
@@ -13699,7 +13797,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8177457313161849676, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2158611122094458675, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+      insertIndex: 11
+      addedObject: {fileID: 624989932}
+    - targetCorrespondingSourceObject: {fileID: 2158611122094458675, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+      insertIndex: 12
+      addedObject: {fileID: 277751472}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
 --- !u!114 &1631871238 stripped
@@ -13713,6 +13817,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02883e28594b9ff448ab76783bd78478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1631871239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2158611122094458675, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2875948711719243713, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8632908246836056939, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1848906761745924371, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174708609840765715, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2360252403659644501, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372741553169395600, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5527768690321467696, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2939784691876948829, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631871248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8427943600532628297, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 1631871237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1633567352
 GameObject:
   m_ObjectHideFlags: 0
@@ -14811,17 +14965,17 @@ MonoBehaviour:
   - {fileID: 456243797}
   - {fileID: 73562804}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1631871248}
+  - {fileID: 1631871247}
+  - {fileID: 1631871246}
+  - {fileID: 1631871245}
+  - {fileID: 1631871244}
+  - {fileID: 1631871243}
+  - {fileID: 1631871242}
+  - {fileID: 1631871241}
+  - {fileID: 1631871240}
+  - {fileID: 624989931}
+  - {fileID: 277751470}
   inventoryInfo: {fileID: 1718563945}
   slotNumber: 2
 --- !u!114 &1856800106

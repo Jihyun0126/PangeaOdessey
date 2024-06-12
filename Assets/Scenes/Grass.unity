@@ -195,17 +195,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 0
 --- !u!114 &16923665
@@ -1062,17 +1062,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 3
 --- !u!114 &230857863
@@ -1421,7 +1421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2875948711719243713, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3324192590948020689, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: prefabId
@@ -1481,7 +1481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8427943600532628297, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8599075667011626760, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: prefabId
@@ -1514,6 +1514,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02883e28594b9ff448ab76783bd78478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &282414889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2875948711719243713, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8632908246836056939, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1848906761745924371, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174708609840765715, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2360252403659644501, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372741553169395600, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5527768690321467696, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2939784691876948829, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &282414897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8427943600532628297, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 282414887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &338901582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,17 +2975,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 2
 --- !u!114 &617054701
@@ -2997,7 +3042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &622953900
 Transform:
   m_ObjectHideFlags: 0
@@ -3958,7 +4003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &952445161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12663,17 +12708,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 4
 --- !u!114 &1367981241
@@ -12849,17 +12894,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 0
 --- !u!114 &1420796004
@@ -14024,7 +14069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1604667058
 Transform:
   m_ObjectHideFlags: 0
@@ -14313,17 +14358,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 1
 --- !u!114 &1662351943
@@ -14437,17 +14482,17 @@ MonoBehaviour:
   - {fileID: 945356482}
   - {fileID: 775341686}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 282414897}
+  - {fileID: 282414896}
+  - {fileID: 282414895}
+  - {fileID: 282414894}
+  - {fileID: 282414893}
+  - {fileID: 282414892}
+  - {fileID: 282414891}
+  - {fileID: 282414890}
+  - {fileID: 282414889}
+  - {fileID: 622953899}
+  - {fileID: 1604667057}
   inventoryInfo: {fileID: 1024818617}
   slotNumber: 0
 --- !u!114 &1717216110

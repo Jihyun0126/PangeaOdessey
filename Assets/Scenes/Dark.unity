@@ -473,17 +473,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 4
 --- !u!114 &14269781
@@ -900,17 +900,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 0
 --- !u!114 &224553237
@@ -1423,17 +1423,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 0
 --- !u!114 &371838314
@@ -2070,6 +2070,51 @@ PrefabInstance:
 --- !u!4 &564846409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2158611122094458675, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2875948711719243713, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8632908246836056939, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1848906761745924371, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7174708609840765715, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2360252403659644501, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 372741553169395600, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5527768690321467696, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2939784691876948829, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+  m_PrefabInstance: {fileID: 564846408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &564846418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8427943600532628297, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
   m_PrefabInstance: {fileID: 564846408}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &574511944 stripped
@@ -3425,17 +3470,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 1
 --- !u!114 &914886004
@@ -4005,17 +4050,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 0
 --- !u!114 &1092944697
@@ -4614,17 +4659,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 3
 --- !u!114 &1215185129
@@ -5416,17 +5461,17 @@ MonoBehaviour:
   - {fileID: 1086996994}
   - {fileID: 1540460154}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 564846418}
+  - {fileID: 564846417}
+  - {fileID: 564846416}
+  - {fileID: 564846415}
+  - {fileID: 564846414}
+  - {fileID: 564846413}
+  - {fileID: 564846412}
+  - {fileID: 564846411}
+  - {fileID: 564846410}
+  - {fileID: 1752931130}
+  - {fileID: 2080296616}
   inventoryInfo: {fileID: 1761509335}
   slotNumber: 2
 --- !u!114 &1457160718
