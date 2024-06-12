@@ -1039,6 +1039,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e30da3944bec0844a2a7921c0a7e22c, type: 3}
+--- !u!114 &208129498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6547643458592636573, guid: 0e30da3944bec0844a2a7921c0a7e22c, type: 3}
+  m_PrefabInstance: {fileID: 208129497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833335e38b92c5b479b551b142b20263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &230857859
 GameObject:
   m_ObjectHideFlags: 0
@@ -11926,7 +11937,7 @@ PrefabInstance:
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: pool
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 208129498}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: timer
       value: 
