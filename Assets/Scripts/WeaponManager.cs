@@ -29,9 +29,6 @@ public class WeaponManager : MonoBehaviour
     }
 
     public void BuyWeapon(){
-        // 중복되는 무기종류가 있는지 확인
-        
-
         //인벤토리가 비었는지 확인
         if(weaponId > 0){
             if(inventory.Count >= inventorySize){
@@ -117,7 +114,7 @@ public class WeaponManager : MonoBehaviour
             if(weaponScript != null && weaponScript.prefabId == id){
                 weaponObject.SetActive(true);
             }else{
-                
+                Debug.Log("무기 활성화 실패");
             }
         }
     }

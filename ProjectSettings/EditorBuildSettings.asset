@@ -14,4 +14,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: e6d878a9a27b754458b692eb9a003103
+  - enabled: 1
+    path: Assets/Scenes/2ChooseCharacterScene.unity
+    guid: f4835f9119c87d24895eaae713f678c1
+  - enabled: 1
+    path: Assets/Scenes/3MapScene.unity
+    guid: 7241f479279760443864c5e2e4401363
+  - enabled: 1
+    path: Assets/Scenes/Dark.unity
+    guid: 1497022dab5d92044a5b30a6206a68c7
+  - enabled: 1
+    path: Assets/Scenes/DarkStage.unity
+    guid: 62b594e305154d34293fff123f3e45b0
+  - enabled: 1
+    path: Assets/Scenes/Fire.unity
+    guid: 2d25bbc3534bde34ca3ff4355005670f
+  - enabled: 1
+    path: Assets/Scenes/FireStage.unity
+    guid: 5b410af2213ab354aba0318315b717c1
+  - enabled: 1
+    path: Assets/Scenes/Grass.unity
+    guid: 065ac619877fbe04fb6696d52bb42422
+  - enabled: 1
+    path: Assets/Scenes/GrassStage.unity
+    guid: fbdb213c0d9b94d478f79f95bed7020c
+  - enabled: 1
+    path: Assets/Scenes/Ice.unity
+    guid: 6e06b4b27f57f754184a9e2e6aca9f43
+  - enabled: 1
+    path: Assets/Scenes/IceStage.unity
+    guid: 84f5fe1e3b019db4bbd98c8469bc7ce5
   m_configObjects: {}

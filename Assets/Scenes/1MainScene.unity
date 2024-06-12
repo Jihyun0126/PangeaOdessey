@@ -1471,7 +1471,6 @@ RectTransform:
   - {fileID: 870509491}
   - {fileID: 1465065251}
   - {fileID: 1468540545}
-  - {fileID: 196156773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2133,7 +2132,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 134984583}
+  m_Father: {fileID: 1047939078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7150,6 +7149,7 @@ RectTransform:
   - {fileID: 1563112175}
   - {fileID: 889203582}
   - {fileID: 985611482}
+  - {fileID: 196156773}
   m_Father: {fileID: 134984583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13083,6 +13083,7 @@ GameObject:
   - component: {fileID: 2026744502}
   - component: {fileID: 2026744501}
   - component: {fileID: 2026744500}
+  - component: {fileID: 2026744503}
   m_Layer: 5
   m_Name: Start Buttnon
   m_TagString: Untagged
@@ -13154,31 +13155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1047939079}
-        m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
-        m_MethodName: OnClickGameStartButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 339638508}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 196156774}
+      - m_Target: {fileID: 2026744503}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChooseCharacterScene
         m_Mode: 1
@@ -13228,6 +13205,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026744498}
   m_CullTransparentMesh: 1
+--- !u!114 &2026744503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026744498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb85ca7e692c5b4bb5ef55d251e114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2049039336
 GameObject:
   m_ObjectHideFlags: 0
@@ -13698,5 +13687,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 462502214}
   - {fileID: 134984583}
+  - {fileID: 462502214}
