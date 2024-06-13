@@ -41,7 +41,6 @@ public class BossControls : MonoBehaviour
             Debug.LogError("Attack range collider not found! Please add a child game object with a BoxCollider2D.");
         }
     }
-
     void FixedUpdate()
     {
         if (!isLive) return;
@@ -81,7 +80,6 @@ public class BossControls : MonoBehaviour
             lastProjectileSpawnTime = Time.time;
         }
     }
-
     void FlipTowardsPlayer()
     {
         // 플레이어의 위치에 따라 보스의 방향을 변경
@@ -94,7 +92,6 @@ public class BossControls : MonoBehaviour
             Flip();
         }
     }
-
     void Flip()
     {
         facingRight = !facingRight;
@@ -113,7 +110,6 @@ public class BossControls : MonoBehaviour
             projectileScript.Initialize(lastPlayerPosition, projectileDamage);
         }
     }
-
     public void TakeDamage(float amount)
     {
         if (!isLive) return;
@@ -144,8 +140,6 @@ public class BossControls : MonoBehaviour
         }
     }
 }
-
-    
     void Die()
     {
         isLive = false;

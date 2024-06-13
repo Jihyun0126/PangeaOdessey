@@ -12316,6 +12316,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7908816212846537895, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
   m_PrefabInstance: {fileID: 1195734062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1195734064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
+  m_PrefabInstance: {fileID: 1195734062}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1206509119
 GameObject:
   m_ObjectHideFlags: 0
@@ -14005,7 +14010,7 @@ PrefabInstance:
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHUD
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1195734064}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHealth
       value: 2

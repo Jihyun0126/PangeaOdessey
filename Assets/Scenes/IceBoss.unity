@@ -11467,7 +11467,7 @@ PrefabInstance:
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHUD
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 997354698}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHealth
       value: 2
@@ -12710,15 +12710,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 984657774405979189, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 984657774405979189, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
       propertyPath: m_Name
       value: BossHP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7908816212846537895, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
       propertyPath: m_Pivot.x
@@ -12808,6 +12812,11 @@ PrefabInstance:
 --- !u!224 &997354697 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7908816212846537895, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
+  m_PrefabInstance: {fileID: 997354696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &997354698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
   m_PrefabInstance: {fileID: 997354696}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1088055033

@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
         bitCoin = 0;
         if (bossHUD != null)
         {
+            Debug.Log("보스 setActive false");
             bossHUD.SetActive(false); // 게임 시작 시 보스 HP UI 비활성화
         }
         clear = GameObject.Find("ClearGamePanel");
@@ -96,7 +97,12 @@ public class GameManager : MonoBehaviour
 
         if (bossHUD != null)
         {
+            Debug.Log("보스 ui 실행");
             bossHUD.SetActive(true); // 보스가 스폰될 때 HP UI 활성화
+        }
+        else
+        {
+            Debug.Log("오류");
         }
         bossSpawned = true; // 보스를 한 번만 스폰되도록 설정
     }
