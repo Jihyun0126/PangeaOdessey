@@ -145,6 +145,7 @@ public class BossControls : MonoBehaviour
     }
 }
 
+    
     void Die()
     {
         isLive = false;

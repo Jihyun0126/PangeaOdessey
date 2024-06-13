@@ -32,6 +32,7 @@ public class BossManager : MonoBehaviour
         // 보스 HP Bar 초기화 및 표시
     }
 
+    
     public void TakeDamage(int damage)
     {
         bossCurrentHP -= damage;

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("# Game Control")]
     public float gameTime;
     public float maxGameTime = 2 * 10f;
+    public int bossMode = 0; // 0이면 일반맵, 1이면 보스맵
     [Header("# Player info")]
     public bool isLive;
     public static int bitCoin = 0;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         gameTime += Time.deltaTime;
         
-        if (gameTime >= bossSpawnTime && !bossSpawned)
+        if (bossMode == 1 && gameTime >= bossSpawnTime && !bossSpawned)
         {
             SpawnBoss();
         }
@@ -90,6 +91,7 @@ public class GameManager : MonoBehaviour
         bossSpawned = true; // 보스를 한 번만 스폰되도록 설정
     }
     
+
     public void TakeDamage(float amount)
     {
         health -= amount;
