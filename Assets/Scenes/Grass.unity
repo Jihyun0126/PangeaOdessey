@@ -12685,7 +12685,7 @@ PrefabInstance:
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHUD
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHealth
       value: 2

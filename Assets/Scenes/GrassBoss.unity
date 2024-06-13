@@ -2520,17 +2520,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 4
 --- !u!114 &405975274
@@ -2787,17 +2787,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 1
 --- !u!114 &435833993
@@ -3144,17 +3144,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 3
 --- !u!114 &452935259
@@ -3335,17 +3335,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 2
 --- !u!114 &457608001
@@ -14040,17 +14040,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 0
 --- !u!114 &1326044733
@@ -15694,17 +15694,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 0
 --- !u!114 &1869169739
@@ -16346,17 +16346,17 @@ MonoBehaviour:
   - {fileID: 56700739}
   - {fileID: 1141606687}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1753127769}
+  - {fileID: 2017804179}
+  - {fileID: 701418488}
+  - {fileID: 299720504}
+  - {fileID: 2091745490}
+  - {fileID: 1514238825}
+  - {fileID: 817962326}
+  - {fileID: 1802554786}
+  - {fileID: 1670953537}
+  - {fileID: 398437029}
+  - {fileID: 1091784509}
   inventoryInfo: {fileID: 2016928592}
   slotNumber: 0
 --- !u!114 &1999430552
