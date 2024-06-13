@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
 
     [Header("# Boss Damage")]
     public float bossDamageAmount = 10f;
+
+    GameObject clear;
+    GameObject gameover;
     
     void Awake()
     {
@@ -50,6 +53,8 @@ public class GameManager : MonoBehaviour
         {
             bossHUD.SetActive(false); // 게임 시작 시 보스 HP UI 비활성화
         }
+        clear = GameObject.Find("ClearGamePanel");
+        gameover = GameObject.Find("GameGamePanel");
     }
 
     void Update()
@@ -67,10 +72,14 @@ public class GameManager : MonoBehaviour
             TimeSpan timeSpan = TimeSpan.FromSeconds(gameTime);
             string timeString = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
             timer.text = timeString;
-            if (gameTime > maxGameTime) {
-            
-            }
         }
+        if(bossMode == 0 && gameTime < maxGameTime && health > 0){
+            // 일반맵 게임 클리어 시
+            // 클리어 패널 활성화 게임 일시정지
+            Time.timeScale = 0f;
+            clear.SetActive(true);
+        }
+
         gold.text = bitCoin.ToString()+ "G";
     }
     
@@ -107,9 +116,8 @@ public class GameManager : MonoBehaviour
 
     void PlayerDead()
     {
-        // 플레이어가 죽었을 때 처리할 로직을 여기에 추가합니다.
-        //Debug.Log("Player is Dead. Game Over.");
-        // 예: 게임 오버 화면 활성화, 게임 오버 사운드 재생 등
+        Time.timeScale = 0f;
+        gameover.SetActive(true);
     }
     
     public void TakeBossDamage(float amount)
@@ -127,7 +135,7 @@ public class GameManager : MonoBehaviour
 
     void BossDead()
     {
-        // 보스가 죽었을 때 처리할 로직을 여기에 추가합니다.
-        // 예: 보스 사망 애니메이션 재생, 보스 관련 UI 비활성화 등
+        Time.timeScale = 0f;
+        clear.SetActive(true);
     }
 }
