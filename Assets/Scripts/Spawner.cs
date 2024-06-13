@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
         //자기 자신의 우변을 더함
         timer += Time.deltaTime;
         //시간에 맞춰 레벨을 올림
-        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 60f),spawnData.Length - 1); //0레벨 
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 5f),spawnData.Length - 1); //0레벨 
         if(timer > spawnData[level].spawnTime)
         {
             Spawn();

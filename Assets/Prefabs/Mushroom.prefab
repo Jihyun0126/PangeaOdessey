@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8977892242327406477, guid: 86abfdcd22282ea4986e3f882afbf33c, type: 3}
   speed: 2
+  originalspeed: 0
   health: 10
   maxHealth: 3
   animCon:
@@ -206,7 +207,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 8200385395e269e40a4c2ee30e7681b6, type: 2}
   - {fileID: 22100000, guid: 0281fced25e9f4b468ccbee22563b806, type: 2}
   - {fileID: 22100000, guid: c0fb5be2beee1f2449217eb989f11027, type: 2}
-  - {fileID: 22100000, guid: 19407e56bbe781846b91f73b4fd4d7c8, type: 2}
+  - {fileID: 22100000, guid: 67665aa4fda1f4141805f4093a4eb790, type: 2}
   target: {fileID: 0}
   anim: {fileID: 0}
   playerLayer:
