@@ -579,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
       propertyPath: spawnData.Array.data[3].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c5de99a52e03d6c49801e6106d218eaf, type: 3}
+      objectReference: {fileID: 8300000, guid: 28ef991c2d8ae194d8ad6ed269529afd, type: 3}
     - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
       propertyPath: spawnData.Array.data[0].spriteType
       value: 12
@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
       propertyPath: spawnData.Array.data[3].spriteType
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -7980,7 +7980,7 @@ PrefabInstance:
     - target: {fileID: 5098442159010509087, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: spawnData.Array.data[3].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c5de99a52e03d6c49801e6106d218eaf, type: 3}
+      objectReference: {fileID: 8300000, guid: 28ef991c2d8ae194d8ad6ed269529afd, type: 3}
     - target: {fileID: 5098442159010509087, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: spawnData.Array.data[0].spriteType
       value: 12
