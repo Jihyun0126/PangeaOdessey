@@ -37,8 +37,9 @@ public class GameManager : MonoBehaviour
     [Header("# Boss Damage")]
     public float bossDamageAmount = 10f;
 
-    GameObject clear;
-    GameObject gameover;
+    [Header("# Panel")]
+    public GameObject clear;
+    public GameObject gameover;
     
     void Awake()
     {
@@ -53,8 +54,6 @@ public class GameManager : MonoBehaviour
         {
             bossHUD.SetActive(false); // 게임 시작 시 보스 HP UI 비활성화
         }
-        clear = GameObject.Find("ClearGamePanel");
-        gameover = GameObject.Find("GameGamePanel");
     }
 
     void Update()
@@ -82,6 +81,10 @@ public class GameManager : MonoBehaviour
         }
 
         gold.text = bitCoin.ToString()+ "G";
+        if(health < 0){
+            Debug.Log("플레이어 죽음");
+            PlayerDead();
+        }
     }
     
     void SpawnBoss()
@@ -110,7 +113,7 @@ public class GameManager : MonoBehaviour
         if (health < 0) health = 0;
 
         // 필요 시 플레이어가 죽었을 때 로직 추가
-        if (health <= 0)
+        if (health == 0)
         {
             PlayerDead();
         }
@@ -118,7 +121,6 @@ public class GameManager : MonoBehaviour
 
     void PlayerDead()
     {
-        Time.timeScale = 0f;
         gameover.SetActive(true);
     }
     
