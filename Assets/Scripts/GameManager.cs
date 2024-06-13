@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
         bitCoin = 0;
         if (bossHUD != null)
         {
-            Debug.Log("보스 setActive false");
             bossHUD.SetActive(false); // 게임 시작 시 보스 HP UI 비활성화
         }
         clear = GameObject.Find("ClearGamePanel");
@@ -97,13 +96,10 @@ public class GameManager : MonoBehaviour
 
         if (bossHUD != null)
         {
-            Debug.Log("보스 ui 실행");
+
             bossHUD.SetActive(true); // 보스가 스폰될 때 HP UI 활성화
         }
-        else
-        {
-            Debug.Log("오류");
-        }
+
         bossSpawned = true; // 보스를 한 번만 스폰되도록 설정
     }
     
@@ -112,7 +108,6 @@ public class GameManager : MonoBehaviour
     {
         health -= amount;
         if (health < 0) health = 0;
-        Debug.Log("Health after damage: " + health);
 
         // 필요 시 플레이어가 죽었을 때 로직 추가
         if (health <= 0)
@@ -131,7 +126,6 @@ public class GameManager : MonoBehaviour
     {
         bossHealth -= amount;
         if (bossHealth < 0) bossHealth = 0;
-        Debug.Log("Boss Health after damage: " + bossHealth);
 
         // 필요 시 보스가 죽었을 때 로직 추가
         if (bossHealth <= 0)

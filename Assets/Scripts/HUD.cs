@@ -14,13 +14,7 @@ public class HUD : MonoBehaviour
     void Awake()
     { 
         myText = GetComponent<Text>();
-        mySlider = GetComponent<Slider>();
-
-        if (mySlider == null)
-        {
-            //Debug.LogError("Slider component not found!");
-        }
-
+      
     }
 
     void LateUpdate()
@@ -51,18 +45,18 @@ public class HUD : MonoBehaviour
                 break;
         }
     }
+
     void UpdateHealthUI()
     {
         float curHealth = GameManager.instance.health;
         float maxHealth = GameManager.instance.maxHealth;
         mySlider.value = curHealth / maxHealth;
-        Debug.Log("Slider value: " + mySlider.value);
     }
+
     void UpdateBossHPUI()
     {
     float curBossHealth = GameManager.instance.bossHealth;
     float maxBossHealth = GameManager.instance.maxBossHealth;
     mySlider.value = curBossHealth / maxBossHealth;
-    Debug.Log("Boss HP Slider value: " + mySlider.value);
     }
 }

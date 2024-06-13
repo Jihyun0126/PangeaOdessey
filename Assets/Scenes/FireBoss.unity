@@ -11715,6 +11715,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1195734063}
+  - {fileID: 528908007}
   - {fileID: 387040427}
   - {fileID: 1118119731}
   - {fileID: 1248288949}
@@ -11723,8 +11725,6 @@ RectTransform:
   - {fileID: 971561851}
   - {fileID: 1120740063}
   - {fileID: 1494193172}
-  - {fileID: 1195734063}
-  - {fileID: 528908007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14011,6 +14011,10 @@ PrefabInstance:
       propertyPath: bossHUD
       value: 
       objectReference: {fileID: 1195734064}
+    - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
+      propertyPath: bossMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHealth
       value: 2

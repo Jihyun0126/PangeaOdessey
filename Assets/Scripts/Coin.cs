@@ -9,7 +9,7 @@ public class Coin : MonoBehaviour
         if (collision.tag == "Player")
         {
             GameManager.bitCoin++;
-            Debug.Log(GameManager.bitCoin);
+
             gameObject.SetActive(false);
         }
     }
