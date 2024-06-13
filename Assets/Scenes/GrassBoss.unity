@@ -4255,6 +4255,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
+      propertyPath: spawnData.Array.data[0].health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
+      propertyPath: spawnData.Array.data[1].health
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
+      propertyPath: spawnData.Array.data[2].health
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
+      propertyPath: spawnData.Array.data[3].health
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023888544286115767, guid: 5fd9f0943c79a4e45a7dffefa767ca6b, type: 3}
       propertyPath: spawnData.Array.data[0].audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f74bef756d2fd34c88616d4a7a25188, type: 3}

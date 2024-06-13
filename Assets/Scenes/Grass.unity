@@ -2033,6 +2033,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5457577743184509158, guid: 863c835c6dcd9c147bea946e47be1932, type: 3}
     - target: {fileID: 5098442159010509087, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+      propertyPath: spawnData.Array.data[2].health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098442159010509087, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
+      propertyPath: spawnData.Array.data[3].health
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098442159010509087, guid: 10c5e1a945857cc49bdeb88d7aa9f791, type: 3}
       propertyPath: spawnData.Array.data[0].audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0f74bef756d2fd34c88616d4a7a25188, type: 3}
