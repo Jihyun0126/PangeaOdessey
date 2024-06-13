@@ -2264,6 +2264,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 244677974}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 421028118}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: EndGame
@@ -17572,9 +17584,9 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 244677973}
   - {fileID: 287107686}
   - {fileID: 918672473}
+  - {fileID: 244677973}
   - {fileID: 1119326128}
   - {fileID: 1815462114}
   - {fileID: 1681144655}

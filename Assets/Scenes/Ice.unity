@@ -553,17 +553,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 4
 --- !u!114 &48709325
@@ -9217,6 +9217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 13372088}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 402139502}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: EndGame
@@ -9565,17 +9577,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 2
 --- !u!114 &468891660
@@ -12177,17 +12189,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 0
 --- !u!114 &977710840
@@ -14157,17 +14169,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 1
 --- !u!114 &1463693389
@@ -14389,17 +14401,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 0
 --- !u!114 &1494616879
@@ -15076,17 +15088,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 0
 --- !u!114 &1752899814
@@ -15985,17 +15997,17 @@ MonoBehaviour:
   - {fileID: 9282006}
   - {fileID: 375019289}
   weaponObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 364852065}
+  - {fileID: 605106059}
+  - {fileID: 1122253482}
+  - {fileID: 362535233}
+  - {fileID: 853569535}
+  - {fileID: 1654691443}
+  - {fileID: 1965310353}
+  - {fileID: 1136434190}
+  - {fileID: 947723693}
+  - {fileID: 709339788}
+  - {fileID: 28766979}
   inventoryInfo: {fileID: 1940700581}
   slotNumber: 3
 --- !u!114 &1926531616
@@ -17095,6 +17107,6 @@ SceneRoots:
   - {fileID: 1270302566}
   - {fileID: 780833332}
   - {fileID: 968261610}
-  - {fileID: 13372092}
   - {fileID: 23463788}
+  - {fileID: 13372092}
   - {fileID: 1961536046}
