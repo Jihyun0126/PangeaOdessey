@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   category: 1
   name: "\uD480 \uBC29\uD328"
-  price: 1500
+  price: 300
   damage: 3
   property: 1
   image: {fileID: -315824732, guid: 6d561872f1ba93b4699f7cbf86b2aac4, type: 3}

@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.5, y: 1.7}
+  m_Offset: {x: 2.5164297, y: 1.6630332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 3.5}
+  m_Size: {x: 2.2042642, y: 3.0974708}
   m_EdgeRadius: 0
 --- !u!114 &7399142277827356805
 MonoBehaviour:
@@ -5132,7 +5132,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   detectionRadius: 5
-  health: 500
+  health: 300
   attackDamage: 10
   collisionDamage: 5
   projectilePrefab: {fileID: 1547789051345944078, guid: 0071ad87ee8a9b444947fd3cceb85afe, type: 3}

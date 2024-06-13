@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            GameManager.bitCoin++;
+            GameManager.bitCoin += 50;
 
             gameObject.SetActive(false);
         }

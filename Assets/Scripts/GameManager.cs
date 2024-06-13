@@ -72,10 +72,9 @@ public class GameManager : MonoBehaviour
             string timeString = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
             timer.text = timeString;
         }
-        if(bossMode == 0 && gameTime == maxGameTime && health > 0){
+        if(bossMode == 0 && gameTime>=300 && health > 0){
             // 일반맵 게임 클리어 시
             // 클리어 패널 활성화 게임 일시정지
-            Time.timeScale = 0f;
             if(clear != null)
                 clear.SetActive(true);
         }
