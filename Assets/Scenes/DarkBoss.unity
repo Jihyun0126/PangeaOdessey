@@ -3964,6 +3964,7 @@ MonoBehaviour:
   damageAmount: 2
   damageInterval: 2
   damageEffectPrefab: {fileID: 0}
+  nextDamageTime: 0
 --- !u!114 &828808508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3979,6 +3980,7 @@ MonoBehaviour:
   damageAmount: 2
   damageInterval: 2
   damageEffectPrefab: {fileID: 0}
+  nextDamageTime: 0
 --- !u!114 &828808509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3994,6 +3996,7 @@ MonoBehaviour:
   damageAmount: 2
   damageInterval: 2
   damageEffectPrefab: {fileID: 0}
+  nextDamageTime: 0
 --- !u!114 &828808510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4009,6 +4012,7 @@ MonoBehaviour:
   damageAmount: 2
   damageInterval: 2
   damageEffectPrefab: {fileID: 0}
+  nextDamageTime: 0
 --- !u!1 &835044803
 GameObject:
   m_ObjectHideFlags: 0
