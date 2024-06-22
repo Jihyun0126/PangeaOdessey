@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class LoadingSceneManager : MonoBehaviour
 {
     public static string nextScene;
-    private float time;
+    
 
     void Start()
     {

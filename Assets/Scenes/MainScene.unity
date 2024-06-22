@@ -6230,7 +6230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uACE0\uC694\uD55C \uC124\uC6D0"
+  m_Text: "\uC0AC\uB9C9"
 --- !u!222 &819495845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8572,7 +8572,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1089415518}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: GrassBossScene
+        m_MethodName: FireBossScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

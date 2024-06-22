@@ -42,7 +42,7 @@ public class StoreUIManager : MonoBehaviour
             textcolor = new Color32(0,0,255,255);
             StoreGrade.text = "2단계 상점";
             StoreGrade.color = textcolor;
-            GameManager.bitCoin += -1500;
+    
             storeGradeId = 2;
             upGradeButton.interactable =false;
         }

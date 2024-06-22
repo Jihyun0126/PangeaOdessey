@@ -7,7 +7,6 @@ public class MakeRandomNumber : MonoBehaviour
 {   
     public List<int> randomNumber;
     public int minNumber , maxNumber;
-    StoreUIManager UIManager;
 
     public void RandomNumberGenerator()
     {
@@ -30,8 +29,11 @@ public class MakeRandomNumber : MonoBehaviour
     }
 
     public void UpgradeStore(){
-        minNumber += 4;
-        maxNumber += 5;
+        if(minNumber < 2){
+            minNumber += 4;
+            maxNumber += 5;
+            GameManager.bitCoin -= 1500;
+        }
     }
     
     
