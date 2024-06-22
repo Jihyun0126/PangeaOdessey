@@ -14052,6 +14052,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244486344}
   m_CullTransparentMesh: 1
+--- !u!1 &1304379420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
+  m_PrefabInstance: {fileID: 258936214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1326044731
 GameObject:
   m_ObjectHideFlags: 0
@@ -17231,7 +17236,7 @@ PrefabInstance:
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossHUD
       value: 
-      objectReference: {fileID: 1482633305466880164, guid: 8bc0cb2403eb525469d4e8f1064353d2, type: 3}
+      objectReference: {fileID: 1304379420}
     - target: {fileID: 5854243245224599532, guid: 35279fccab05f934daa29f87664d02f7, type: 3}
       propertyPath: bossMode
       value: 1
