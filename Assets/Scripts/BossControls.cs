@@ -155,7 +155,6 @@ public class BossControls : MonoBehaviour
             GameManager.instance.TakeDamage(collisionDamage);
         }
     }
-
     // 공격 범위 내 플레이어에게 데미지를 입히는 함수
     public void ApplyAttackDamage()
     {
